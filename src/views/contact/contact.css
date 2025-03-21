@@ -1,0 +1,294 @@
+/* Contact Info Header */
+.contact-info-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    color: white;
+    margin: -2rem -2rem 2rem -2rem;
+  }
+
+  .contact-info-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Contact Info Container */
+  .contact-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Business Details */
+  .business-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .detail-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .detail-card h2 {
+    color: #2c2c2c;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #c0a080;
+  }
+
+  .hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hours-item:last-child {
+    border-bottom: none;
+  }
+
+  .hours-item .day {
+    color: #2c2c2c;
+    font-weight: 500;
+  }
+
+  .hours-item .time {
+    color: #666;
+  }
+
+  /* Contact Methods */
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .contact-item i {
+    color: #c0a080;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+  }
+
+  .contact-details h3 {
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-details p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Location Section */
+  .location-section {
+    grid-column: 1 / -1;
+  }
+
+  .location-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .address {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .address i {
+    color: #c0a080;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+  }
+
+  .address-details h3 {
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .address-details p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .map-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+  }
+
+  /* Additional Information */
+  .additional-info {
+    grid-column: 1 / -1;
+  }
+
+  .info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .info-item h3 {
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-item p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Emergency Contact */
+  .emergency-contact {
+    grid-column: 1 / -1;
+  }
+
+  .emergency-card {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .emergency-card h2 {
+    color: #2c2c2c;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .emergency-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  .emergency-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .emergency-details i {
+    color: #c0a080;
+    font-size: 1.5rem;
+  }
+
+  .emergency-details h3 {
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .emergency-details p {
+    color: #666;
+    margin-bottom: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .contact-info-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-info-header {
+      padding: 4rem 1rem 3rem;
+    }
+
+    .contact-info-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .contact-info-container {
+      padding: 0 1rem;
+    }
+
+    .detail-card,
+    .location-card,
+    .info-card,
+    .emergency-card {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-info-header h1 {
+      font-size: 2rem;
+    }
+
+    .contact-info-header p {
+      font-size: 1rem;
+    }
+
+    .hours-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .contact-item,
+    .address {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .map-container {
+      height: 250px;
+    }
+  }

@@ -1,0 +1,41 @@
+/* ***** special notes ****** */
+/* global theme variables found in themetoggle.css */
+
+/* Full page view imports */
+@import './views/contact/contact.css';
+@import './views/home/home.css';
+@import './views/legal/legal.css';
+@import './views/services/services.css';
+
+/* component imports */
+@import './components/footer/footer.css';
+@import './components/navbar/navbar.css';
+@import './components/themeToggle/themetoggle.css';
+
+/* reset */
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* max sizing for app */
+.app {
+  max-width: 1250px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/* global variables */
+:root {
+  --center: center;
+  --mar-bottom: 20px;
+}
+.centered {
+  display: flex;
+  justify-content: var(--center);
+}
+.margin-bottom-20 {
+  margin-bottom: var(--mar-bottom);
+}

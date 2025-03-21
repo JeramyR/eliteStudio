@@ -1,0 +1,225 @@
+.services-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .services-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  /* Services Sections */
+  .services-section {
+    padding: 4rem 2rem;
+    background: #fff;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    color: #2c2c2c;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Service Cards */
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-card i {
+    font-size: 2.5rem;
+    color: #c0a080;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card h3 {
+    color: #2c2c2c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .service-card ul li {
+    color: #666;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .service-card ul li:before {
+    content: "•";
+    color: #c0a080;
+    position: absolute;
+    left: 0;
+  }
+
+  /* Wellness Section */
+  .wellness-section {
+    background: #f8f8f8;
+  }
+
+  /* Laser Section */
+  .laser-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  .laser-section .section-header h2,
+  .laser-section .section-header p {
+    color: white;
+  }
+
+  .laser-section .service-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .laser-section .service-card h3,
+  .laser-section .service-card p,
+  .laser-section .service-card ul li {
+    color: white;
+  }
+
+  .laser-section .service-card ul li:before {
+    color: #c0a080;
+  }
+
+  /* Consultation Section */
+  .consultation-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+
+  .consultation-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .consultation-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .consultation-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    background: #c0a080;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background: #a88860;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .services-header {
+      padding: 4rem 1rem 3rem;
+    }
+
+    .services-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+    }
+
+    .services-section {
+      padding: 3rem 1rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .services-header h1 {
+      font-size: 2rem;
+    }
+
+    .services-header p {
+      font-size: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+
+    .service-card i {
+      font-size: 2rem;
+    }
+  }
