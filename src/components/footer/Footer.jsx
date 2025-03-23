@@ -45,7 +45,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-links">
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/" aria-label="Instagram">
               <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
           </div>
