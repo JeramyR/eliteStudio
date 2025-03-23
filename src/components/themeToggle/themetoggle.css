@@ -1,18 +1,25 @@
 :root {
-  --bg-color-light: #f0f0e8;
-  --bg-color-dark: #1c2135;
-
-  --border-color-light: #1c2135;
-  --border-color-dark: #f0f0e8;
-
+  /* light mode */
+  --bg-color: #f0f0e8;
+  --border-color: #1c2135;
+  --text-color: black;
+  /* button for light-dark mode */
   --sun-color: #fabc1c;
   --moon-color: #fffdf2;
-
   --day-bg-color: #0dbdf6;
   --night-bg-color: #272a30;
-
   --cloud-color: #fffdf2;
   --star-color: #fffdf2;
+}
+
+.dark {
+  --bg-color: #1c2135;
+  --border-color: #f0f0e8;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
 }
 
 .theme-switcher-grid {
@@ -24,7 +31,9 @@
   border-radius: 49px;
   border: 1px solid var(--border-color-light);
   cursor: pointer;
-  transition: background-color 0.8s ease, border-color 0.8s ease;
+  transition:
+    background-color 0.8s ease,
+    border-color 0.8s ease;
   appearance: none;
   padding: 0;
 }
@@ -40,7 +49,9 @@
   grid-column: 3 / 23;
   grid-row: 3 / 23;
   border-radius: 50%;
-  transition: grid-column 0.8s ease, background-color 0.8s ease;
+  transition:
+    grid-column 0.8s ease,
+    background-color 0.8s ease;
   height: 20px;
 }
 
@@ -53,10 +64,13 @@
 .moon-overlay {
   position: absolute;
   border-radius: 50%;
-  transition: left 0.8s ease, background-color 0.8s ease;
+  transition:
+    left 0.8s ease,
+    background-color 0.8s ease;
   z-index: 1;
   background-color: var(--day-bg-color);
 }
+
 .theme-switcher-grid.night-theme .moon-overlay {
   display: block;
   left: calc(28 / 54 * 100%);
@@ -65,6 +79,7 @@
   height: 18px;
   background-color: var(--night-bg-color);
 }
+
 .cloud-ball {
   background-color: var(--cloud-color);
   border-radius: 50%;
@@ -74,15 +89,17 @@
   transition: all 0.8s ease;
   z-index: 2;
 }
+
 /* Stars */
-.star {
+/* .star {
   background-color: var(--star-color);
   width: 1px;
   height: 1px;
   position: absolute;
   opacity: 0;
   transition: opacity 0.8s ease;
-}
+} */
+
 #ball1 {
   top: calc((8 / 24) * 100%);
   left: calc((12 / 54) * 100%);
@@ -130,6 +147,7 @@
   width: 2px;
   height: 2px;
 }
-.theme-switcher-grid.night-theme .star {
-  opacity: 1;
-}
+
+/* .theme-switcher-grid.night-theme .star {
+  opacity: 0;
+} */
