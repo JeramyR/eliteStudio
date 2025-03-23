@@ -1,4 +1,11 @@
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faInstagram,
+  faFacebook,
+  faTwitter,
+  faPinterest,
+} from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   return (
@@ -44,16 +51,16 @@ function Footer() {
           <h3>Follow Us</h3>
           <div className="social-links">
             <a href="#" aria-label="Facebook">
-              <i className="fab fa-facebook"></i>
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
             <a href="#" aria-label="Instagram">
-              <i className="fab fa-instagram"></i>
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
             <a href="#" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
             <a href="#" aria-label="Pinterest">
-              <i className="fab fa-pinterest"></i>
+              <FontAwesomeIcon icon={faPinterest} size="2x" />
             </a>
           </div>
         </div>
