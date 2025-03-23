@@ -1,119 +1,119 @@
 .navbar {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
 
-  .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .navbar-logo {
-    text-decoration: none;
-  }
+.navbar-logo {
+  text-decoration: none;
+}
 
-  .navbar-logo h1 {
-    color: #2c2c2c;
-    font-size: 1.8rem;
-    margin: 0;
-    font-weight: 700;
+.navbar-logo h1 {
+  color: #2c2c2c;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-link {
+  color: #2c2c2c;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c0a080;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: #c0a080;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #2c2c2c;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
   }
 
   .navbar-menu {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .navbar-link {
-    color: #2c2c2c;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-
-  .navbar-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #c0a080;
-    transition: width 0.3s ease;
-  }
-
-  .navbar-link:hover,
-  .navbar-link.active {
-    color: #c0a080;
-  }
-
-  .navbar-link:hover::after,
-  .navbar-link.active::after {
+    position: fixed;
+    top: 70px;
+    left: -100%;
     width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #ffffff;
+    flex-direction: column;
+    padding: 2rem;
+    transition: left 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .navbar-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
+  .navbar-menu.active {
+    left: 0;
   }
 
-  .navbar-toggle span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: #2c2c2c;
-    margin: 5px 0;
-    transition: all 0.3s ease;
+  .navbar-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .navbar-toggle {
-      display: block;
-    }
-
-    .navbar-menu {
-      position: fixed;
-      top: 70px;
-      left: -100%;
-      width: 100%;
-      height: calc(100vh - 70px);
-      background-color: #ffffff;
-      flex-direction: column;
-      padding: 2rem;
-      transition: left 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-menu.active {
-      left: 0;
-    }
-
-    .navbar-toggle.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .navbar-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .navbar-toggle.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-    }
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
   }
+
+  .navbar-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}

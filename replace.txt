@@ -1,1 +1,0 @@
-npm run build aws s3 sync dist/ s3://eliteaesthetics.pro --delete --acl public-read aws cloudfront create-invalidation --distribution-id E1SR2R82GDUK49 --paths "/*" Open https://eliteaesthetics.pro in a browser.
