@@ -1,94 +1,145 @@
-# React + Vite
+# Elite Injection Studio – Cosmetic Aesthetics Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Elite Injection Studio is a modern, responsive web application designed to support and promote the services of Sabra, a licensed aesthetics nurse providing cosmetic injections and medical aesthetic procedures.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The site highlights a range of treatments including:
 
-## Expanding the ESLint configuration
+- Neurotoxin (Dysport) wrinkle reduction
+- SkinPen microneedling for skin rejuvenation
+- PRP/PRF injections for collagen stimulation and hair restoration
+- BioFillers made from PRP/PRF for volume and elasticity
+- IV and injection-based vitamin therapy (B12, NAD, Glutathione, Lipo-MIC, etc.)
+- GLP-1-based weight loss management
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The design focuses on trust, comfort, and a clean clinical feel to help clients understand available services and confidently book consultations.
 
-🧹 Linting, Formatting, and Pre-commit Setup
-This project uses a modern linting and formatting setup to ensure consistent, clean, and readable code across the team.
+## Tech Stack
 
-🔧 Tools Used
-Tool Purpose
-ESLint Linting JavaScript/JSX and enforcing best practices
-Prettier Code formatting (quotes, spacing, etc.)
-Husky Git hooks for enforcing rules on commit
-lint-staged Runs ESLint and Prettier on staged files only
-📦 Installing Dependencies
-All dependencies are already listed in package.json, so after cloning the repo:
+- React (with Vite)
+- Font Awesome for icons
+- ESLint and Prettier for code consistency
+- Husky v9+ and lint-staged for pre-commit linting/formatting
+- Deployed via AWS S3 and CloudFront
 
-bash
-Copy
-Edit
+## Getting Started
+
+### 1. Clone the Repository
+
+```
+git clone https://github.com/JeramyR/eliteStudio.git
+cd eliteStudio
+```
+
+### 2. Install Dependencies
+
+```
 npm install
-This will:
+```
 
-Install all dev dependencies
-Set up Husky pre-commit hooks automatically (via postinstall)
-✅ What Happens on Commit?
-When you commit code, the following process runs:
+This installs all required dev tools, UI libraries, and sets up Husky.
 
-Only staged files are checked (not your whole project)
-eslint --fix is run on .js/.jsx files
-prettier --write is run on .js/.jsx/.json/.md/.css files
-If errors can be fixed — they are.
-If linting errors can’t be auto-fixed — the commit is blocked with an error message.
-🧪 Linting & Formatting Manually
-You can manually lint or format everything at any time:
+### 3. Run the Dev Server
 
-bash
-Copy
-Edit
+```
+npm run dev
+```
+
+## Font Awesome Setup
+
+Font Awesome is used for social and functional icons (e.g. Instagram, email, location, etc.).
+
+### Installation
+
+```
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/free-brands-svg-icons
+npm install @fortawesome/react-fontawesome
+```
+
+### Usage Example
+
+```jsx
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+<FontAwesomeIcon icon={faInstagram} />;
+```
+
+## Code Quality and Formatting
+
+This project enforces clean code using:
+
+- ESLint (Flat config)
+- Prettier
+- Husky v9+
+- lint-staged
+
+### Lint and Format Manually
+
+```
 npx eslint . --fix
 npx prettier --write .
-💥 Strict Function Style Rules
-We enforce writing components using function declarations instead of arrow functions:
+```
 
-js
-Copy
-Edit
-// ✅ Allowed
-function MyComponent() {
-return <div>Hello</div>;
+## Pre-commit Setup (Husky v9+)
+
+Git hooks are managed with Husky and lint-staged.
+
+### Hook Behavior on Commit
+
+- Lints and fixes staged JS/JSX files
+- Formats applicable files (JS, JSON, MD, CSS)
+- Blocks commit if errors remain after autofix
+
+### Hook Setup
+
+No `npx husky install` needed in Husky v9+. Instead, use:
+
+```
+git config core.hooksPath .husky
+```
+
+### Pre-commit Script
+
+`.husky/pre-commit`:
+
+```sh
+#!/bin/sh
+npx lint-staged
+```
+
+Make sure it is executable:
+
+```
+chmod +x .husky/pre-commit
+```
+
+To automatically configure this for all developers:
+
+```json
+"scripts": {
+  "postinstall": "git config core.hooksPath .husky"
 }
+```
 
-// ❌ Not Allowed
-const MyComponent = () => {
-return <div>Hello</div>;
-};
-⚠️ Arrow functions in things like .map() are still allowed!
+## VS Code Recommended Settings
 
-📁 Ignored Paths
-ESLint and Prettier will ignore:
-
-Copy
-Edit
-node_modules/
-dist/
-.husky/
-To customize, check .eslintignore and .prettierignore.
-
-💻 VS Code Recommended Settings
-Ensure these are set in .vscode/settings.json (you can create it if needed):
-
-json
-Copy
-Edit
+```json
 {
-"editor.formatOnSave": true,
-"editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
-Also, make sure the Prettier extension is installed.
+```
 
-✅ Summary
-Action Result
-git commit Triggers auto-format + lint fix on staged files
-npx eslint . --fix Lints and fixes all project files
-npx prettier --write . Formats all supported files
-VSCode Save Auto-formats with Prettier if enabled
+Install the Prettier extension in VS Code.
+
+## Deployment
+
+Deployment is handled via AWS S3 and CloudFront. Instructions are located in `DEPLOY.md` (internal use only).
+
+## License
+
+This project is developed by Jeramy Reid for Elite Injection Studio. All rights reserved.
