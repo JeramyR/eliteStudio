@@ -20,11 +20,12 @@ html,
   padding: 0;
   box-sizing: border-box;
 }
+
 /* max sizing for app */
+
 .app {
   max-width: 1250px;
   margin: 0 auto;
-  background-color: white;
 }
 
 /* global variables */
@@ -32,10 +33,12 @@ html,
   --center: center;
   --mar-bottom: 20px;
 }
+
 .centered {
   display: flex;
   justify-content: var(--center);
 }
+
 .margin-bottom-20 {
   margin-bottom: var(--mar-bottom);
 }
