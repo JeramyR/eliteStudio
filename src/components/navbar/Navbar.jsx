@@ -23,6 +23,9 @@ function Navbar() {
         </Link>
         <div className="navbar-spacer">
           <ThemeToggle />
+          <a href="tel:555-555-5555" className="navbar-phone">
+            📞
+          </a>
           <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
             <Link
               to="/"

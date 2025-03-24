@@ -97,3 +97,7 @@ html,
 .margin-bottom-20 {
   margin-bottom: var(--mar-bottom);
 }
+
+h1 {
+  font-family: var(--small-line-break);
+}
