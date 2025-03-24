@@ -19,30 +19,33 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <h1>Elite Injection Studio</h1>
+          {/* <img className="logo-1" src={logo} alt="Elite Injection Studio" /> */}
         </Link>
-        <ThemeToggle />
-        <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
-          <Link
-            to="/"
-            className={`navbar-link ${isActive('/')}`}
-            onClick={() => setIsOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            to="/services"
-            className={`navbar-link ${isActive('/services')}`}
-            onClick={() => setIsOpen(false)}
-          >
-            Services
-          </Link>
-          <Link
-            to="/contact"
-            className={`navbar-link ${isActive('/contact')}`}
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </Link>
+        <div className="navbar-spacer">
+          <ThemeToggle />
+          <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
+            <Link
+              to="/"
+              className={`navbar-link ${isActive('/')}`}
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              to="/services"
+              className={`navbar-link ${isActive('/services')}`}
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              to="/contact"
+              className={`navbar-link ${isActive('/contact')}`}
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
+          </div>
         </div>
 
         <button

@@ -31,10 +31,6 @@ function ThemeToggle() {
         id="ball4"
         aria-hidden="true"
       ></div>
-      {/* <div className="star" id="star1" aria-hidden="true"></div>
-      <div className="star" id="star2" aria-hidden="true"></div>
-      <div className="star" id="star3" aria-hidden="true"></div>
-      <div className="star" id="star4" aria-hidden="true"></div> */}
     </button>
   );
 }

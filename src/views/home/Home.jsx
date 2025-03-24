@@ -1,7 +1,67 @@
+import { useEffect, useState } from 'react';
+
+const images = [
+  '/images/bg-1.webp',
+  '/images/bg-2.webp',
+  '/images/bg-3.webp',
+  '/images/bg-4.webp',
+];
+
 function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [previousImageIndex, setPreviousImageIndex] = useState(null);
+  const [isFading, setIsFading] = useState(false);
+  const [allImagesLoaded, setAllImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    let loadedCount = 0;
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          setAllImagesLoaded(true);
+        }
+      };
+    });
+  }, []);
+  useEffect(() => {
+    if (!allImagesLoaded) return;
+
+    const interval = setInterval(() => {
+      setPreviousImageIndex(currentImageIndex);
+      setIsFading(true);
+
+      setTimeout(() => {
+        setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+        setIsFading(false);
+      }, 100); // fade timing delay before advancing index
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [allImagesLoaded, currentImageIndex]);
+
   return (
     <div className="home-page">
       {/* Hero Section */}
+      {allImagesLoaded && (
+        <>
+          {/* Previous image fades out */}
+          {previousImageIndex !== null && (
+            <div
+              className={`hero-bg ${isFading ? 'fade-out' : ''}`}
+              style={{ backgroundImage: `url(${images[previousImageIndex]})` }}
+            />
+          )}
+
+          {/* Current image fades in */}
+          <div
+            className={`hero-bg ${isFading ? 'fade-in' : 'visible'}`}
+            style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+          />
+        </>
+      )}
       <section className="hero-section">
         <div className="hero-content">
           <h1>Transform Your Beauty</h1>
