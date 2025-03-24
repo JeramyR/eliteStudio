@@ -1,17 +1,44 @@
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* change */
   color: var(--text-color);
-  /* change */
   padding: 0 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 6s ease-in-out;
+  pointer-events: none;
+}
+
+.hero-bg.visible {
+  opacity: 1;
+}
+
+.hero-bg.fade-in {
+  opacity: 1;
+  z-index: -1;
+}
+
+.hero-bg.fade-out {
+  opacity: 0;
+  z-index: -2;
 }
 
 .hero-content {
@@ -22,7 +49,7 @@
   font-size: 4rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .hero-content p {
