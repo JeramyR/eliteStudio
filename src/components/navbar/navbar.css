@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+.navbar-spacer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+}
+
 .navbar-logo {
   text-decoration: none;
 }

@@ -33,7 +33,7 @@ body {
   position: relative;
   background-color: var(--day-bg-color);
   border-radius: 49px;
-  border: 1px solid var(--border-color-light);
+  border: 1px outset transparent;
   cursor: pointer;
   transition:
     background-color 0.8s ease,
@@ -44,7 +44,7 @@ body {
 
 .theme-switcher-grid.night-theme {
   background-color: var(--night-bg-color);
-  border-color: var(--border-color-dark);
+  border-color: silver;
 }
 
 /* Sun & Moon */
@@ -95,15 +95,6 @@ body {
 }
 
 /* Stars */
-/* .star {
-  background-color: var(--star-color);
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-} */
-
 #ball1 {
   top: calc((8 / 24) * 100%);
   left: calc((12 / 54) * 100%);
@@ -151,7 +142,3 @@ body {
   width: 2px;
   height: 2px;
 }
-
-/* .theme-switcher-grid.night-theme .star {
-  opacity: 0;
-} */
