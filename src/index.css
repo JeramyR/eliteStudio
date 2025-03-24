@@ -1,6 +1,5 @@
 /* ***** special notes ****** */
 /* global theme variables found in themetoggle.css */
-
 /* Full page view imports */
 @import './views/contact/contact.css';
 @import './views/home/home.css';
@@ -12,6 +11,54 @@
 @import './components/navbar/navbar.css';
 @import './components/themeToggle/themetoggle.css';
 
+@font-face {
+  font-family: 'large-line-break';
+  src: url('/fonts/Antic_Didone/AnticDidone-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'my-text';
+  src: url('/fonts/Beau_Rivage/BeauRivage.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'cursive-text';
+  src: url('/fonts/Fleur_De_Leah/FleurDeLeah.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'flower-text';
+  src: url('/fonts/Love_Light/LoveLight.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'small-line-break';
+  src: url('/fonts/Playfair_Display_SC/PlayfairDisplaySC.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'general-text';
+  src: url('/fonts/Prata/Prata.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* reset */
 body,
 html,
@@ -21,17 +68,25 @@ html,
   box-sizing: border-box;
 }
 
-/* max sizing for app */
-
-.app {
-  max-width: 1250px;
-  margin: 0 auto;
-}
-
 /* global variables */
 :root {
   --center: center;
   --mar-bottom: 20px;
+  /* fonts */
+  --large-line-break: 'large-line-break';
+  --small-line-break: 'small-line-break';
+  --general-text: 'general-text';
+  /* logo font */
+  --my-text: 'my-text';
+  --flower-text: 'flower-text';
+  /* may not use this font */
+  --cursive-text: 'cursive-text';
+}
+
+/* max sizing for app */
+.app {
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .centered {
