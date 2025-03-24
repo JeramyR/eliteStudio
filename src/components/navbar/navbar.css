@@ -90,6 +90,12 @@
 }
 
 /* Responsive Design */
+@media (min-width: 769px) {
+  .navbar-phone {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-toggle {
     display: block;
