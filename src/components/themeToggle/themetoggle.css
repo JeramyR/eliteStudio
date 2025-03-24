@@ -1,8 +1,10 @@
 :root {
   /* light mode */
   --bg-color: #f0f0e8;
+  --bg-color-2: #fff8dc;
   --border-color: #1c2135;
-  --text-color: black;
+  --text-color: rgb(0, 0, 0);
+  --box-shadow-color: 0 4px 6px #0000001a;
   /* button for light-dark mode */
   --sun-color: #fabc1c;
   --moon-color: #fffdf2;
@@ -13,9 +15,11 @@
 }
 
 .dark {
-  --bg-color: #1c2135;
+  --bg-color: #00000079;
+  --bg-color-2: #2f4f4f;
   --border-color: #f0f0e8;
   --text-color: white;
+  --box-shadow-color: 0 4px 6px #ffffff1a;
 }
 
 body {
