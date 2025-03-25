@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Section from '../../components/sectionBreak/SectionBreak';
 
 const images = [
   '/images/bg-1.webp',
@@ -71,7 +72,7 @@ function Home() {
           <button className="cta-button">Book Appointment</button>
         </div>
       </section>
-
+      <Section text="Prescott's Premier Med Spa" />
       {/* Featured Services */}
       <section className="featured-services">
         <h2>Our Premium Services</h2>

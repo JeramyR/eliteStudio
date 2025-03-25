@@ -1,0 +1,23 @@
+.section-divider {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-divider .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #c0a080;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+  opacity: 0.7;
+}
+
+.section-divider .divider-text {
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--small-line-break);
+  letter-spacing: 0.5em;
+  color: #2c2c2c;
+}

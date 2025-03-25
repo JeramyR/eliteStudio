@@ -10,6 +10,7 @@
 @import './components/footer/footer.css';
 @import './components/navbar/navbar.css';
 @import './components/themeToggle/themetoggle.css';
+@import './components/sectionBreak/section-break.css';
 
 @font-face {
   font-family: 'large-line-break';
