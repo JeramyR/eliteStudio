@@ -11,6 +11,7 @@
 @import './components/navbar/navbar.css';
 @import './components/parallax/parallax.css';
 @import './components/sectionBreak/section-break.css';
+@import './components/sectionTitle/section-title.css';
 @import './components/themeToggle/themetoggle.css';
 
 @font-face {
@@ -73,7 +74,7 @@ html,
 /* global variables */
 :root {
   --center: center;
-  --mar-bottom: 20px;
+  --mar-bottom: 10rem;
   /* fonts */
   --large-line-break: 'large-line-break';
   --small-line-break: 'small-line-break';
@@ -87,7 +88,7 @@ html,
 
 /* max sizing for app */
 .app {
-  max-width: 1250px;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
@@ -100,6 +101,7 @@ html,
   margin-bottom: var(--mar-bottom);
 }
 
-h1 {
-  font-family: var(--small-line-break);
+.text {
+  font-family: var(--general-text);
+  color: var(--text-color);
 }

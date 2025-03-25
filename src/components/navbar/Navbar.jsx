@@ -19,7 +19,6 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <h1>Elite Injection Studio</h1>
-          {/* <img className="logo-1" src={logo} alt="Elite Injection Studio" /> */}
         </Link>
         <div className="navbar-spacer">
           <ThemeToggle />

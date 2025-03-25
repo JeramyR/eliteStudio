@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import Section from '../../components/sectionBreak/SectionBreak';
-
+import SmallSection from '../../components/sectionBreak/SectionBreak';
+import TitleSection from '../../components/sectionTitle/SectionTitle';
+// const lasergirl = '/images/bg-parallax-1.webp';
 const images = [
   '/images/bg-1.webp',
   '/images/bg-2.webp',
@@ -66,14 +67,54 @@ function Home() {
       <section className="hero-section">
         <div className="hero-content">
           <h1>Transform Your Beauty</h1>
-          <p>
+          <p className="text">
             Experience luxury beauty treatments and expert aesthetic services
           </p>
           <button className="cta-button">Book Appointment</button>
         </div>
       </section>
-      <Section text="Prescott's Premier Med Spa" />
-
+      <SmallSection text="Prescott's Premier Med Spa" />
+      {/* <div
+        style={{
+          marginBottom: '7rem',
+          marginTop: '7rem',
+          minHeight: '50vh',
+          width: '100%',
+          backgroundImage: `url(${lasergirl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      ></div> */}
+      <TitleSection text="Elevating Beauty, Backed by Credentials" />
+      <SmallSection text="Welcome to Elite Injection Studio!" />
+      {/* About Section */}
+      <section className="about-section">
+        <div className="about-content">
+          <div className="about-text">
+            <h2>Enhance Your Natural Beauty</h2>
+            <p>
+              I’m Sabra, a licensed aesthetics nurse and I’m here to help you
+              enhance your natural beauty with expert cosmetic injections as
+              well as other medical aesthetic procedures. Whether you’re looking
+              to smooth fine lines, add volume, or rejuvenate your skin, I offer
+              personalized treatments that will leave you looking refreshed and
+              youthful. I’m committed to providing safe, effective, and tailored
+              care in a comfortable, relaxing environment. Your unique needs are
+              my priority, and I can’t wait to help you feel your best.
+            </p>
+            <ul className="features-list">
+              <li>✓ Licensed Medical Professional</li>
+              <li>✓ Premium Products</li>
+              <li>✓ Personalized Treatment Plans</li>
+              <li>✓ Relaxing Environment</li>
+            </ul>
+          </div>
+          <div className="about-image">
+            <div className="image-placeholder">Salon Interior</div>
+          </div>
+        </div>
+      </section>
       {/* Featured Services */}
       <section className="featured-services">
         <h2>Our Premium Services</h2>
@@ -99,30 +140,6 @@ function Home() {
             <p>
               Professional manicures and pedicures for beautiful hands and feet
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="about-section">
-        <div className="about-content">
-          <div className="about-text">
-            <h2>Why Choose Us</h2>
-            <p>
-              With over 15 years of experience, our team of certified
-              professionals provides the highest quality beauty and aesthetic
-              services. We combine cutting-edge techniques with personalized
-              care to help you achieve your desired look.
-            </p>
-            <ul className="features-list">
-              <li>✓ Licensed Medical Professionals</li>
-              <li>✓ Premium Products</li>
-              <li>✓ Personalized Treatment Plans</li>
-              <li>✓ Relaxing Environment</li>
-            </ul>
-          </div>
-          <div className="about-image">
-            <div className="image-placeholder">Salon Interior</div>
           </div>
         </div>
       </section>

@@ -1,0 +1,351 @@
+
+
+diff --git a/src/components/navbar/Navbar.jsx b/src/components/navbar/Navbar.jsx
+index a0afb20..013a7db 100644
+--- a/src/components/navbar/Navbar.jsx
++++ b/src/components/navbar/Navbar.jsx
+@@ -19,7 +19,6 @@ function Navbar() {
+       <div className="navbar-container">
+         <Link to="/" className="navbar-logo">
+           <h1>Elite Injection Studio</h1>
+-          {/* <img className="logo-1" src={logo} alt="Elite Injection Studio" /> */}
+         </Link>
+         <div className="navbar-spacer">
+           <ThemeToggle />
+diff --git a/src/components/navbar/navbar.css b/src/components/navbar/navbar.css
+index 535567b..89cc13e 100644
+--- a/src/components/navbar/navbar.css
++++ b/src/components/navbar/navbar.css
+@@ -1,5 +1,5 @@
+ .navbar {
+-  background-color: var(--bg-color);
++  background-color: var(--bg-color-light-primary);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   position: fixed;
+   top: 0;
+@@ -129,4 +129,4 @@
+   .navbar-toggle.active span:nth-child(3) {
+     transform: rotate(-45deg) translateY(-10px);
+   }
+-}
++}
+\ No newline at end of file
+diff --git a/src/components/parallax/Parallax.jsx b/src/components/parallax/Parallax.jsx
+new file mode 100644
+index 0000000..8b13789
+--- /dev/null
++++ b/src/components/parallax/Parallax.jsx
+@@ -0,0 +1 @@
++
+diff --git a/src/components/parallax/parallax.css b/src/components/parallax/parallax.css
+new file mode 100644
+index 0000000..e69de29
+diff --git a/src/components/sectionBreak/SectionBreak.jsx b/src/components/sectionBreak/SectionBreak.jsx
+new file mode 100644
+index 0000000..aceda05
+--- /dev/null
++++ b/src/components/sectionBreak/SectionBreak.jsx
+@@ -0,0 +1,11 @@
++function SectionDivider({ text }) {
++  return (
++    <div className="section-divider">
++      <div className="line" />
++      <span className="divider-text">{text}</span>
++      <div className="line" />
++    </div>
++  );
++}
++
++export default SectionDivider;
+diff --git a/src/components/sectionBreak/section-break.css b/src/components/sectionBreak/section-break.css
+new file mode 100644
+index 0000000..c563c75
+--- /dev/null
++++ b/src/components/sectionBreak/section-break.css
+@@ -0,0 +1,23 @@
++.section-divider {
++  height: 70px;
++  display: flex;
++  align-items: center;
++  gap: 1rem;
++}
++
++.section-divider .line {
++  flex-grow: 1;
++  height: 2px;
++  background-color: #c0a080;
++  box-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.75);
++  opacity: 0.7;
++}
++
++.section-divider .divider-text {
++  white-space: nowrap;
++  font-size: 0.75rem;
++  font-weight: 600;
++  font-family: var(--small-line-break);
++  letter-spacing: 0.5em;
++  color: #2c2c2c;
++}
+diff --git a/src/components/themeToggle/themetoggle.css b/src/components/themeToggle/themetoggle.css
+index f750ca6..33b5a4e 100644
+--- a/src/components/themeToggle/themetoggle.css
++++ b/src/components/themeToggle/themetoggle.css
+@@ -1,10 +1,18 @@
+ :root {
+   /* light mode */
+-  --bg-color: #f0f0e8;
+-  --bg-color-2: #fff8dc;
++  --bg-color-light-primary: rgba(240, 240, 232, 0.8);
++  --bg-color-light-secondary: rgb(255, 248, 220);
++  --bg-color-light-tertiary: linear-gradient(-75deg,
++      rgba(255, 255, 255, 0) 0%,
++      rgba(186, 85, 211, 0.05) 48%,
++      rgba(186, 85, 211, 0.05) 52%,
++      rgba(255, 255, 255, 0) 100%);
+   --border-color: #1c2135;
+-  --text-color: rgb(0, 0, 0);
+-  --box-shadow-color: 0 4px 6px #0000001a;
++  --text-color-dark: rgb(0, 0, 0);
++  --text-color-light: rgb(255, 255, 255);
++  --text-color-silver: silver;
++  --box-shadow-color-dark: 2px 2px 4px rgba(0, 0, 0, 1);
++  --box-shadow-color-light: 0 4px 6px silver;
+   /* button for light-dark mode */
+   --sun-color: #fabc1c;
+   --moon-color: #fffdf2;
+@@ -15,15 +23,19 @@
+ }
+
+ .dark {
+-  --bg-color: #00000079;
+-  --bg-color-2: #2f4f4f;
++  --bg-color-light-primary: #00000079;
++  --bg-color-light-secondary: #00000087;
++  --bg-color-light-tertiary: silver;
+   --border-color: #f0f0e8;
+-  --text-color: white;
+-  --box-shadow-color: 0 4px 6px #ffffff1a;
++  --text-color-dark: white;
++  --text-color-light: white;
++  --text-color-silver: rgb(0, 0, 0);
++  --box-shadow-color-dark: 2px 2px 4px rgb(192, 192, 192);
++  --box-shadow-color-light: 0 4px 6px #0202021a;
+ }
+
+ body {
+-  background-color: var(--bg-color);
++  background-color: var(--bg-color-light-primary);
+ }
+
+ .theme-switcher-grid {
+@@ -141,4 +153,4 @@ body {
+   left: calc((34 / 54) * 100%);
+   width: 2px;
+   height: 2px;
+-}
++}
+\ No newline at end of file
+diff --git a/src/index.css b/src/index.css
+index 974fc72..cb30b62 100644
+--- a/src/index.css
++++ b/src/index.css
+@@ -9,6 +9,9 @@
+ /* component imports */
+ @import './components/footer/footer.css';
+ @import './components/navbar/navbar.css';
++@import './components/parallax/parallax.css';
++@import './components/sectionBreak/section-break.css';
++@import './components/sectionTitle/section-title.css';
+ @import './components/themeToggle/themetoggle.css';
+
+ @font-face {
+@@ -71,7 +74,7 @@ html,
+ /* global variables */
+ :root {
+   --center: center;
+-  --mar-bottom: 20px;
++  --mar-bottom: 10rem;
+   /* fonts */
+   --large-line-break: 'large-line-break';
+   --small-line-break: 'small-line-break';
+@@ -85,7 +88,7 @@ html,
+
+ /* max sizing for app */
+ .app {
+-  max-width: 1250px;
++  max-width: 80vw;
+   margin: 0 auto;
+ }
+
+@@ -98,6 +101,7 @@ html,
+   margin-bottom: var(--mar-bottom);
+ }
+
+-h1 {
+-  font-family: var(--small-line-break);
+-}
++.text {
++  font-family: var(--general-text);
++  color: var(--text-color);
++}
+\ No newline at end of file
+diff --git a/src/views/home/Home.jsx b/src/views/home/Home.jsx
+index 1b65bf9..819866d 100644
+--- a/src/views/home/Home.jsx
++++ b/src/views/home/Home.jsx
+@@ -1,5 +1,7 @@
+ import { useEffect, useState } from 'react';
+-
++import SmallSection from '../../components/sectionBreak/SectionBreak';
++import TitleSection from '../../components/sectionTitle/SectionTitle';
++const lasergirl = '/images/bg-parallax-1.webp';
+ const images = [
+   '/images/bg-1.webp',
+   '/images/bg-2.webp',
+@@ -65,13 +67,54 @@ function Home() {
+       <section className="hero-section">
+         <div className="hero-content">
+           <h1>Transform Your Beauty</h1>
+-          <p>
++          <p className="text">
+             Experience luxury beauty treatments and expert aesthetic services
+           </p>
+           <button className="cta-button">Book Appointment</button>
+         </div>
+       </section>
+-
++      <SmallSection text="Prescott's Premier Med Spa" />
++      {/* <div
++        style={{
++          marginBottom: '7rem',
++          marginTop: '7rem',
++          minHeight: '50vh',
++          width: '100%',
++          backgroundImage: `url(${lasergirl})`,
++          backgroundSize: 'cover',
++          backgroundPosition: 'center',
++          backgroundRepeat: 'no-repeat',
++        }}
++      ></div> */}
++      <TitleSection text="Elevating Beauty, Backed by Credentials" />
++      <SmallSection text="Welcome to Elite Injection Studio!" />
++      {/* About Section */}
++      <section className="about-section">
++        <div className="about-content">
++          <div className="about-text">
++            <h2>Enhance Your Natural Beauty</h2>
++            <p>
++              I’m Sabra, a licensed aesthetics nurse and I’m here to help you
++              enhance your natural beauty with expert cosmetic injections as
++              well as other medical aesthetic procedures. Whether you’re looking
++              to smooth fine lines, add volume, or rejuvenate your skin, I offer
++              personalized treatments that will leave you looking refreshed and
++              youthful. I’m committed to providing safe, effective, and tailored
++              care in a comfortable, relaxing environment. Your unique needs are
++              my priority, and I can’t wait to help you feel your best.
++            </p>
++            <ul className="features-list">
++              <li>✓ Licensed Medical Professional</li>
++              <li>✓ Premium Products</li>
++              <li>✓ Personalized Treatment Plans</li>
++              <li>✓ Relaxing Environment</li>
++            </ul>
++          </div>
++          <div className="about-image">
++            <div className="image-placeholder">Salon Interior</div>
++          </div>
++        </div>
++      </section>
+       {/* Featured Services */}
+       <section className="featured-services">
+         <h2>Our Premium Services</h2>
+@@ -101,30 +144,6 @@ function Home() {
+         </div>
+       </section>
+
+-      {/* About Section */}
+-      <section className="about-section">
+-        <div className="about-content">
+-          <div className="about-text">
+-            <h2>Why Choose Us</h2>
+-            <p>
+-              With over 15 years of experience, our team of certified
+-              professionals provides the highest quality beauty and aesthetic
+-              services. We combine cutting-edge techniques with personalized
+-              care to help you achieve your desired look.
+-            </p>
+-            <ul className="features-list">
+-              <li>✓ Licensed Medical Professionals</li>
+-              <li>✓ Premium Products</li>
+-              <li>✓ Personalized Treatment Plans</li>
+-              <li>✓ Relaxing Environment</li>
+-            </ul>
+-          </div>
+-          <div className="about-image">
+-            <div className="image-placeholder">Salon Interior</div>
+-          </div>
+-        </div>
+-      </section>
+-
+       {/* Testimonials */}
+       <section className="testimonials">
+         <h2>Client Testimonials</h2>
+diff --git a/src/views/home/home.css b/src/views/home/home.css
+index 00fcd58..e58b3ad 100644
+--- a/src/views/home/home.css
++++ b/src/views/home/home.css
+@@ -5,11 +5,9 @@
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+-  color: silver;
+   padding: 0 2rem;
+   overflow: hidden;
+   position: relative;
+-  margin-bottom: 10em;
+ }
+
+ .hero-bg {
+@@ -29,11 +27,11 @@
+ }
+
+ .hero-bg.visible {
+-  opacity: 0.25;
++  opacity: 0.35;
+ }
+
+ .hero-bg.fade-in {
+-  opacity: 0.25;
++  opacity: 0.35;
+   z-index: -1;
+ }
+
+@@ -50,7 +48,8 @@
+   font-size: 4rem;
+   margin-bottom: 1.5rem;
+   font-weight: 700;
+-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
++  color: var(--text-color-silver);
++  text-shadow: var(--box-shadow-color-dark);
+ }
+
+ .hero-content p {
+@@ -117,7 +116,10 @@
+ /* About Section */
+ .about-section {
+   padding: 5rem 2rem;
+-  background: #f8f8f8;
++  background: var(--bg-color-light-tertiary);
++  border-radius: 10px;
++  width: 100%;
++  height: 100%;
+ }
+
+ .about-content {
+@@ -312,4 +314,4 @@
+   .cta-section {
+     padding: 3rem 1rem;
+   }
+-}
++}
+\ No newline at end of file
