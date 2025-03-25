@@ -18,8 +18,10 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <h1>Elite Injection Studio</h1>
-          {/* <img className="logo-1" src={logo} alt="Elite Injection Studio" /> */}
+          <h1>
+            <span className="E">E</span>
+            <span className="lite">lite Injection Studio</span>
+          </h1>
         </Link>
         <div className="navbar-spacer">
           <ThemeToggle />

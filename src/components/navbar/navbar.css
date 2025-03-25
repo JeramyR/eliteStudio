@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-light-primary);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -29,10 +29,18 @@
 }
 
 .navbar-logo h1 {
-  color: var(--text-color);
-  font-size: 1.8rem;
+  color: var(--text-color-dark);
   margin: 0;
   font-weight: 700;
+}
+
+.E {
+  font-family: var(--flower-text);
+  font-size: 3.5rem;
+}
+
+.lite {
+  font-family: var(--my-text);
 }
 
 .navbar-menu {
@@ -42,7 +50,7 @@
 }
 
 .navbar-link {
-  color: var(--text-color);
+  color: var(--text-color-dark);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -84,7 +92,7 @@
   display: block;
   width: 25px;
   height: 2px;
-  background-color: var(--text-color);
+  background-color: var(--text-color-dark);
   margin: 5px 0;
   transition: all 0.3s ease;
 }
@@ -107,7 +115,7 @@
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-light-primary);
     flex-direction: column;
     padding: 2rem;
     transition: left 0.3s ease;

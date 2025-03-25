@@ -5,11 +5,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: silver;
   padding: 0 2rem;
   overflow: hidden;
   position: relative;
-  margin-bottom: 10em;
 }
 
 .hero-bg {
@@ -29,11 +27,11 @@
 }
 
 .hero-bg.visible {
-  opacity: 0.25;
+  opacity: 0.35;
 }
 
 .hero-bg.fade-in {
-  opacity: 0.25;
+  opacity: 0.35;
   z-index: -1;
 }
 
@@ -50,7 +48,8 @@
   font-size: 4rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  color: var(--text-color-silver);
+  text-shadow: var(--box-shadow-color-dark);
 }
 
 .hero-content p {
@@ -63,14 +62,14 @@
 .featured-services {
   border-radius: 10px;
   padding: 5rem 2rem;
-  background: var(--bg-color);
+  background: var(--bg-color-light-primary);
   margin-bottom: 10em;
 }
 
 .featured-services h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: var(--text-color);
+  color: var(--text-color-dark);
   margin-bottom: 3rem;
 }
 
@@ -117,7 +116,10 @@
 /* About Section */
 .about-section {
   padding: 5rem 2rem;
-  background: #f8f8f8;
+  background: var(--bg-color-light-tertiary);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .about-content {
