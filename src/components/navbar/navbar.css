@@ -43,6 +43,15 @@
   font-family: var(--my-text);
 }
 
+.navbar-phone {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-phone-icon {
+  height: 35px;
+}
+
 .navbar-menu {
   display: flex;
   gap: 2rem;

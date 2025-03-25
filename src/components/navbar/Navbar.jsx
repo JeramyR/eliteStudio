@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from '../themeToggle/ThemeToggle';
+const phone = '/images/phone.webp';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ function Navbar() {
         <div className="navbar-spacer">
           <ThemeToggle />
           <a href="tel:+1928-514-1352" className="navbar-phone">
-            📞
+            <img className="navbar-phone-icon" src={phone} alt="Phone" />
           </a>
           <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
             <Link
