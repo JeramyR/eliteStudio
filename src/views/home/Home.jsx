@@ -73,6 +73,7 @@ function Home() {
         </div>
       </section>
       <Section text="Prescott's Premier Med Spa" />
+
       {/* Featured Services */}
       <section className="featured-services">
         <h2>Our Premium Services</h2>
