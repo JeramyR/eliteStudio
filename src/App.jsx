@@ -5,7 +5,6 @@ import Services from './views/services/Services';
 import Contact from './views/contact/Contact';
 import Legal from './views/legal/Legal';
 import Home from './views/home/Home';
-// import Test from "./views/test/Test";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/legal" element={<Legal />} />
-          {/* <Route path="/test" element={<Test />} /> */}
         </Routes>
       </main>
       <Outlet />
