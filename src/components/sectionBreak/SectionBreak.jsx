@@ -1,11 +1,13 @@
-function SectionDivider({ text }) {
+import { forwardRef } from 'react';
+
+function SectionDivider(props, ref) {
   return (
-    <div className="section-divider">
+    <div ref={ref} className="section-divider">
       <div className="line" />
-      <span className="divider-text">{text}</span>
+      <span className="divider-text">{props.text}</span>
       <div className="line" />
     </div>
   );
 }
 
-export default SectionDivider;
+export default forwardRef(SectionDivider);
