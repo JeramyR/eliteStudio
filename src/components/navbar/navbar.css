@@ -1,6 +1,6 @@
 .navbar {
   background-color: var(--bg-color-light-primary);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-nav);
   position: fixed;
   top: 0;
   left: 0;
@@ -26,10 +26,11 @@
 
 .navbar-logo {
   text-decoration: none;
+  color: var(--text-color-black-silver);
+  text-shadow: var(--box-shadow-color-light);
 }
 
 .navbar-logo h1 {
-  color: var(--text-color-dark);
   margin: 0;
   font-weight: 700;
 }
@@ -59,13 +60,15 @@
 }
 
 .navbar-link {
-  color: var(--text-color-dark);
+  color: var(--text-color-black-silver);
   text-decoration: none;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: var(--small-line-break);
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease;
+  text-shadow: var(--box-shadow-color-light);
 }
 
 .navbar-link::after {

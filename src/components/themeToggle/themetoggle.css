@@ -9,12 +9,19 @@
     rgba(186, 85, 211, 0.15) 52%,
     rgba(255, 255, 255, 0) 100%
   );
+  --bg-color-fade: linear-gradient(
+    rgba(186, 85, 211, 0.3) 0%,
+    rgba(186, 85, 211, 0) 100%
+  );
   --border-color: #1c2135;
+  --neon-color: hsl(317 100% 54%);
   --text-color-dark: rgb(0, 0, 0);
   --text-color-light: rgb(255, 255, 255);
   --text-color-silver: silver;
+  --text-color-black-silver: black;
   --box-shadow-color-dark: 2px 2px 4px rgba(0, 0, 0, 1);
-  --box-shadow-color-light: 0 4px 6px silver;
+  --box-shadow-color-light: 2px 2px 4px silver;
+  --box-shadow-nav: 0 2px 12px rgba(0, 0, 0, 1);
   /* button for light-dark mode */
   --sun-color: #fabc1c;
   --moon-color: #fffdf2;
@@ -28,12 +35,19 @@
   --bg-color-light-primary: #00000079;
   --bg-color-light-secondary: #00000087;
   --bg-color-light-tertiary: silver;
+  --bg-color-fade: linear-gradient(
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   --border-color: #f0f0e8;
+  --neon-color: rgba(255, 0, 0, 1);
   --text-color-dark: white;
-  --text-color-light: white;
+  --text-color-light: black;
+  --text-color-black-silver: silver;
   --text-color-silver: rgb(0, 0, 0);
   --box-shadow-color-dark: 2px 2px 4px rgb(192, 192, 192);
-  --box-shadow-color-light: 0 4px 6px #0202021a;
+  --box-shadow-color-light: 2px 2px 4px #020202;
+  --box-shadow-nav: 0 2px 12px silver;
 }
 
 body {

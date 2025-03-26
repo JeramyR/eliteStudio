@@ -9,6 +9,7 @@
 /* component imports */
 @import './components/footer/footer.css';
 @import './components/navbar/navbar.css';
+@import './components/parallax/parallax.css';
 @import './components/sectionBreak/section-break.css';
 @import './components/sectionTitle/section-title.css';
 @import './components/themeToggle/themetoggle.css';
@@ -104,4 +105,16 @@ html,
 .text {
   font-family: var(--general-text);
   color: var(--text-color);
+}
+
+.break {
+  margin: 10rem 0;
+  height: 1px;
+}
+
+@media (max-width: 769px) {
+  .break {
+    margin: 2rem;
+    height: 1px;
+  }
 }

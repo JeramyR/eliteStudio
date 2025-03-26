@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import Parallax from '../../components/parallax/Parallax';
 import SmallSection from '../../components/sectionBreak/SectionBreak';
 import TitleSection from '../../components/sectionTitle/SectionTitle';
+const lasergirl = '/images/bg-woman-1.webp';
 
 const images = [
   '/images/bg-1.webp',
@@ -73,19 +75,13 @@ function Home() {
           <button className="cta-button">Book Appointment</button>
         </div>
       </section>
+
       <SmallSection text="Prescott's Premier Med Spa" />
-      <div
-        style={{
-          marginBottom: '7rem',
-          marginTop: '7rem',
-          minHeight: '50vh',
-          width: '100%',
-          // backgroundImage: `url(${lasergirl})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      ></div>
+      <div className="break" />
+      <TitleSection text="Advanced Laser Services for Face & Body" />
+      <SmallSection text="LaserGirl® Skincare Services" />
+      <Parallax image={lasergirl} />
+      <div className="break" />
       <TitleSection text="Elevating Beauty, Backed by Credentials" />
       <SmallSection text="Welcome to Elite Injection Studio!" />
 
