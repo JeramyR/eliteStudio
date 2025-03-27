@@ -50,12 +50,14 @@
   font-weight: 700;
   color: var(--text-color-silver);
   text-shadow: var(--box-shadow-color-dark);
+  font-family: var(--small-line-break);
 }
 
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   opacity: 0.9;
+  font-family: var(--general-text);
 }
 
 /* Featured Services */
@@ -242,22 +244,6 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
   opacity: 0.9;
-}
-
-/* CTA Button */
-.cta-button {
-  background: #c0a080;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #a88860;
 }
 
 /* Responsive Design */

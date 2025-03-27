@@ -8,7 +8,7 @@ export default function Parallax({ image }) {
     offset: ['start end', 'end start'],
   });
   const textY = useTransform(scrollYProgress, [0, 1], ['600%', '-600%']);
-  const buttonY = useTransform(scrollYProgress, [0, 1], ['800%', '-1000%']);
+  const buttonY = useTransform(scrollYProgress, [0, 1], ['800%', '-900%']);
 
   return (
     <div className="parallax-container" ref={ref}>
@@ -16,13 +16,13 @@ export default function Parallax({ image }) {
       <motion.div className="parallax-content" style={{ y: textY }}>
         <h1 className="parallax-header">own your youth</h1>
         <h2 className="parallax-header-2">treat yourself</h2>
-        <p className="parallax-text">
+        <p className="parallax-text b-600">
           Now we can reverse the aged sun damaged skin with the use of cosmetic
           lasers, radio frequency and chemical peels. C02 fractional skin
           resurfacing can turn back your clock by giving you back your youthful
           complexion.
         </p>
-        <p className="parallax-text">
+        <p className="parallax-text-2 b-600">
           LaserGirl operates in sterile conditions and practices strict
           sanitation.
         </p>
@@ -40,7 +40,6 @@ export default function Parallax({ image }) {
             <span className="laser-span"></span>
             <span className="laser-span"></span>
             <div className="laser-top">LASERGIRL</div>
-            <div className="laser-bottom">SKINCARE SUPERHERO</div>
           </a>
         </div>
       </motion.div>

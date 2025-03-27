@@ -198,7 +198,7 @@ function Services() {
             Book a consultation with our experts to create your personalized
             treatment plan
           </p>
-          <button className="cta-button">Book Consultation</button>
+          <button className="button">Book Consultation</button>
         </div>
       </section>
     </div>
