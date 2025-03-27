@@ -72,7 +72,7 @@ function Home() {
           <p>
             Experience luxury beauty treatments and expert aesthetic services
           </p>
-          <button className="cta-button">Book Appointment</button>
+          <button className="button">Book Appointment</button>
         </div>
       </section>
 
@@ -185,7 +185,7 @@ function Home() {
           <p>
             Book your appointment today and experience the luxury you deserve
           </p>
-          <button className="cta-button">Schedule Now</button>
+          <button className="button">Schedule Now</button>
         </div>
       </section>
     </div>

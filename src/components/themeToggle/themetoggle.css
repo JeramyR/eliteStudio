@@ -15,11 +15,12 @@
   );
   --border-color: #1c2135;
   --neon-color: hsl(317 100% 54%);
+  --neon-color-faded: rgba(255, 20, 188, 0.25);
   --text-color-dark: rgb(0, 0, 0);
   --text-color-light: rgb(255, 255, 255);
   --text-color-silver: silver;
   --text-color-black-silver: black;
-  --box-shadow-color-dark: 2px 2px 4px rgba(0, 0, 0, 1);
+  --box-shadow-color-dark: 2px 2px 0 rgba(0, 0, 0, 1);
   --box-shadow-color-light: 2px 2px 4px silver;
   --box-shadow-nav: 0 2px 12px rgba(0, 0, 0, 1);
   /* button for light-dark mode */
@@ -41,11 +42,12 @@
   );
   --border-color: #f0f0e8;
   --neon-color: rgba(255, 0, 0, 1);
+  --neon-color-faded: rgba(255, 0, 0, 0.25);
   --text-color-dark: white;
   --text-color-light: black;
   --text-color-black-silver: silver;
   --text-color-silver: rgb(0, 0, 0);
-  --box-shadow-color-dark: 2px 2px 4px rgb(192, 192, 192);
+  --box-shadow-color-dark: 2px 2px 0 rgb(192, 192, 192);
   --box-shadow-color-light: 2px 2px 4px #020202;
   --box-shadow-nav: 0 2px 12px silver;
 }

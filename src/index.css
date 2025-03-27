@@ -73,7 +73,6 @@ html,
 
 /* global variables */
 :root {
-  --center: center;
   --mar-bottom: 10rem;
   /* fonts */
   --large-line-break: 'large-line-break';
@@ -94,7 +93,11 @@ html,
 
 .centered {
   display: flex;
-  justify-content: var(--center);
+  justify-content: center;
+}
+
+.margin-auto {
+  margin: auto 0;
 }
 
 .margin-bottom-20 {
@@ -112,9 +115,33 @@ html,
   height: 1px;
 }
 
+.b-600 {
+  font-weight: 600;
+}
+
+.button {
+  background: #c0a080;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background: #a88860;
+}
+
 @media (max-width: 769px) {
   .break {
     margin: 2rem;
     height: 1px;
+  }
+
+  .button {
+    padding: 1rem 1rem;
   }
 }
