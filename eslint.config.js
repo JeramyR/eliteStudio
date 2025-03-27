@@ -7,7 +7,19 @@ import prettier from 'eslint-config-prettier';
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
-  { ignores: ['dist'] },
+  {
+    ignores: [
+      'dist',
+      'node_modules',
+      '.husky',
+      '.gitignore',
+      '.vscode',
+      '*.config.js',
+      '.env',
+      'package-lock.json',
+      '.prettierrc',
+    ],
+  },
   js.configs.recommended,
   {
     ...reactPlugin.configs.flat.recommended,
