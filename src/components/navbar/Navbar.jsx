@@ -18,17 +18,28 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        {/* <Link to="/" className="navbar-logo">
           <h1>
             <span className="E">E</span>
             <span className="lite">lite Injection Studio</span>
           </h1>
-        </Link>
-        <div className="navbar-spacer">
+        </Link> */}
+        {/* <div className="navbar-spacer"> */}
+        <div className="col-1">
           <ThemeToggle />
           <a href="tel:+1928-514-1352" className="navbar-phone">
             <img className="navbar-phone-icon" src={phone} alt="Phone" />
           </a>
+        </div>
+        <div className="col-2">
+          <Link to="/" className="navbar-logo">
+            <h1>
+              <span className="E">E</span>
+              <span className="lite">lite Injection Studio</span>
+            </h1>
+          </Link>
+        </div>
+        <div className="col-3">
           <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
             <Link
               to="/"
@@ -53,6 +64,7 @@ function Navbar() {
             </Link>
           </div>
         </div>
+        {/* </div> */}
 
         <button
           className={`navbar-toggle ${isOpen ? 'active' : ''}`}
