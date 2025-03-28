@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Parallax from '../../components/parallax/Parallax';
 import SmallSection from '../../components/sectionBreak/SectionBreak';
 import TitleSection from '../../components/sectionTitle/SectionTitle';
@@ -72,7 +73,9 @@ function Home() {
           <p>
             Experience luxury beauty treatments and expert aesthetic services
           </p>
-          <button className="button">Book Appointment</button>
+          <Link to="/contact" className="button">
+            Book Appointment
+          </Link>
         </div>
       </section>
 
@@ -185,7 +188,9 @@ function Home() {
           <p>
             Book your appointment today and experience the luxury you deserve
           </p>
-          <button className="button">Schedule Now</button>
+          <Link to="/contact" className="button">
+            Schedule Now
+          </Link>
         </div>
       </section>
     </div>

@@ -13,6 +13,8 @@
     rgba(186, 85, 211, 0.3) 0%,
     rgba(186, 85, 211, 0) 100%
   );
+  --bg-color-silver-gold: #c0a080;
+  --bg-color-call: rgb(0, 0, 0, 0.8);
   --border-color: #1c2135;
   --neon-color: hsl(317 100% 54%);
   --neon-color-faded: rgba(255, 20, 188, 0.25);
@@ -21,7 +23,9 @@
   --text-color-silver: silver;
   --text-color-black-silver: black;
   --box-shadow-color-dark: 2px 2px 0 rgba(0, 0, 0, 1);
+  --box-shadow-color-phone: 2px 2px 4px rgba(0, 0, 0, 1);
   --box-shadow-color-light: 2px 2px 4px silver;
+  --box-shadow-logo: 1px 1px 0 #c0a080;
   --box-shadow-nav: 0 2px 12px rgba(0, 0, 0, 1);
   /* button for light-dark mode */
   --sun-color: #fabc1c;
@@ -33,13 +37,15 @@
 }
 
 .dark {
-  --bg-color-light-primary: #00000079;
+  --bg-color-light-primary: rgba(0, 0, 0, 0.475);
   --bg-color-light-secondary: #00000087;
   --bg-color-light-tertiary: silver;
   --bg-color-fade: linear-gradient(
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+  --bg-color-silver-gold: silver;
+  --bg-color-call: rgb(0, 0, 0, 0.3);
   --border-color: #f0f0e8;
   --neon-color: rgba(255, 0, 0, 1);
   --neon-color-faded: rgba(255, 0, 0, 0.25);
@@ -48,7 +54,9 @@
   --text-color-black-silver: silver;
   --text-color-silver: rgb(0, 0, 0);
   --box-shadow-color-dark: 2px 2px 0 rgb(192, 192, 192);
+  --box-shadow-color-phone: 2px 2px 4px rgba(0, 0, 0, 1);
   --box-shadow-color-light: 2px 2px 4px #020202;
+  --box-shadow-logo: 2px 2px 0 #020202;
   --box-shadow-nav: 0 2px 12px silver;
 }
 
@@ -63,7 +71,7 @@ body {
   position: relative;
   background-color: var(--day-bg-color);
   border-radius: 49px;
-  border: 1px outset transparent;
+  border: 1px outset #c0a080;
   cursor: pointer;
   transition:
     background-color 0.8s ease,

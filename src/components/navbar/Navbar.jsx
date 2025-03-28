@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from '../themeToggle/ThemeToggle';
-const phone = '/images/phone.webp';
+import Hamburger from '../hamburger/Hamburger';
+import Logo from '../logo/Logo';
+import Phone from '../phone/Phone';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,30 +18,10 @@ function Navbar() {
   }
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        {/* <Link to="/" className="navbar-logo">
-          <h1>
-            <span className="E">E</span>
-            <span className="lite">lite Injection Studio</span>
-          </h1>
-        </Link> */}
-        {/* <div className="navbar-spacer"> */}
-        <div className="col-1">
-          <ThemeToggle />
-          <a href="tel:+1928-514-1352" className="navbar-phone">
-            <img className="navbar-phone-icon" src={phone} alt="Phone" />
-          </a>
-        </div>
-        <div className="col-2">
-          <Link to="/" className="navbar-logo">
-            <h1>
-              <span className="E">E</span>
-              <span className="lite">lite Injection Studio</span>
-            </h1>
-          </Link>
-        </div>
-        <div className="col-3">
+    <>
+      <nav className="navbar full">
+        <div className="navbar-container">
+          <Logo />
           <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
             <Link
               to="/"
@@ -63,20 +45,44 @@ function Navbar() {
               Contact
             </Link>
           </div>
+          <ThemeToggle />
         </div>
-        {/* </div> */}
+      </nav>
+      <nav className="navbar mobile">
+        <div className="navbar-container">
+          <div className="left-buttons">
+            <Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
+          </div>
+          <Logo />
+          <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
+            <Link
+              to="/"
+              className={`navbar-link ${isActive('/')}`}
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              to="/services"
+              className={`navbar-link ${isActive('/services')}`}
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              to="/contact"
+              className={`navbar-link ${isActive('/contact')}`}
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
+            <ThemeToggle />
+          </div>
 
-        <button
-          className={`navbar-toggle ${isOpen ? 'active' : ''}`}
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
+          <Phone />
+        </div>
+      </nav>
+    </>
   );
 }
 

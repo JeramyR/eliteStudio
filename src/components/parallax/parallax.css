@@ -82,6 +82,10 @@
     var(--neon-color-faded) calc(100% - 38px),
     transparent 100%
   );
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .laser {
@@ -112,6 +116,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+a.laser-link,
+a.laser-link * {
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+  -webkit-touch-callout: none !important;
+  outline: none !important;
 }
 
 .laser-span {
