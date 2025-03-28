@@ -6,7 +6,7 @@
   letter-spacing: 0.5em;
 }
 
-.section-divider .line {
+.section-divider .line-break {
   flex-grow: 1;
   height: 2px;
   background-color: #c0a080;
