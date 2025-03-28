@@ -1,6 +1,7 @@
 .navbar-phone {
   display: flex;
   align-items: center;
+  font-family: var(--my-text);
   text-decoration: none;
   color: var(--bg-color-silver-gold);
   border-top: var(--bg-color-silver-gold) 2px solid;
