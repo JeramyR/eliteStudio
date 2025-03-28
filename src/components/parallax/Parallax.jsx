@@ -39,7 +39,7 @@ export default function Parallax({ image }) {
             <span className="laser-span"></span>
             <span className="laser-span"></span>
             <span className="laser-span"></span>
-            <div className="laser-top">LASERGIRL</div>
+            <span className="laser-top">LASERGIRL</span>
           </a>
         </div>
       </motion.div>

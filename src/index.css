@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'large-line-break';
   src: url('/fonts/Antic_Didone/AnticDidone-Regular.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -51,7 +51,7 @@
 @font-face {
   font-family: 'small-line-break';
   src: url('/fonts/Playfair_Display_SC/PlayfairDisplaySC.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -59,7 +59,7 @@
 @font-face {
   font-family: 'general-text';
   src: url('/fonts/Prata/Prata.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -71,6 +71,10 @@ html,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 /* global variables */
@@ -131,6 +135,15 @@ html,
   cursor: pointer;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--box-shadow-color-phone);
+  font-family: var(--small-line-break);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .button:hover {
