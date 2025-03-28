@@ -12,6 +12,8 @@
 @import './components/navbar/navbar.css';
 @import './components/parallax/parallax.css';
 @import './components/phone/phone.css';
+@import './components/premiumService/premiumservice.css';
+@import './components/serviceCard/servicecard.css';
 @import './components/sectionBreak/section-break.css';
 @import './components/sectionTitle/section-title.css';
 @import './components/themeToggle/themetoggle.css';
