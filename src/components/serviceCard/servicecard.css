@@ -1,0 +1,166 @@
+.service-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.line {
+  position: absolute;
+  background: white;
+  z-index: 2;
+}
+
+.line.top {
+  top: 10px;
+  left: 100%;
+  width: calc(100% - 20px);
+  height: 2px;
+}
+
+.line.right {
+  top: 100%;
+  right: 10px;
+  width: 2px;
+  height: calc(100% - 20px);
+}
+
+.line.bottom {
+  bottom: 10px;
+  right: 100%;
+  width: calc(100% - 20px);
+  height: 2px;
+}
+
+.line.left {
+  bottom: 100%;
+  left: 10px;
+  width: 2px;
+  height: calc(100% - 20px);
+}
+
+.service-card:hover .line.top {
+  animation: slide-top 1s forwards;
+}
+
+.service-card:hover .line.right {
+  animation: slide-right 1s forwards;
+}
+
+.service-card:hover .line.bottom {
+  animation: slide-bottom 1s forwards;
+}
+
+.service-card:hover .line.left {
+  animation: slide-left 1s forwards;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease 1s;
+}
+
+.service-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.service-card-title {
+  color: #2c2c2c;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card-goal {
+}
+
+.service-card-description {
+}
+
+.service-card-link {
+}
+
+.service-span {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  /* Start off-screen to the right */
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, white);
+  animation: none;
+  z-index: 2;
+}
+
+/* Trigger animation when hovering the card */
+.service-card:hover .service-span {
+  animation: line-slide 1s forwards;
+}
+
+@keyframes slide-top {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}

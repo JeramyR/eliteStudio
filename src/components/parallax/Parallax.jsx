@@ -43,15 +43,12 @@ export default function Parallax({ image }) {
           </a>
         </div>
       </motion.div>
-
-      {/* background */}
       <div
         className="parallax-image"
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="color-gradient"></div>
       </div>
-      {/* button */}
     </div>
   );
 }
