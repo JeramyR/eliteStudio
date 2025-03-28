@@ -10,15 +10,16 @@ function Footer() {
           <h3>Contact Us</h3>
           <p>1046 Willow Creek Rd. Suite 26</p>
           <p>Prescott, AZ 86301</p>
-          <p>Phone: (928) 514-1352</p>
-          <p>Email: eliteinjectionstudio@gmail.com</p>
+          <a href="tel:9285141352">(928) 514-1352</a>
+          <a href="mailto:eliteinjectionstudio@gmail.com">
+            eliteinjectionstudio@gmail.com
+          </a>
         </div>
 
         <div className="footer-section">
           <h3>Hours</h3>
-          <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
-          <p>Saturday: 9:00 AM - 6:00 PM</p>
-          <p>Sunday: 10:00 AM - 4:00 PM</p>
+          <p>Monday: 10:00 AM - 5:00 PM</p>
+          <p>Saturday: 10:00 AM - 5:00 PM</p>
         </div>
 
         <div className="footer-section">
@@ -29,9 +30,6 @@ function Footer() {
             </li>
             <li>
               <Link to="/services">Services</Link>
-            </li>
-            <li>
-              <Link to="/gallery">Gallery</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
@@ -54,8 +52,8 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Reid-Roost Development. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Reid-Roost Development Team. All
+          rights reserved.
         </p>
       </div>
     </footer>
