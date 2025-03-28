@@ -1,6 +1,7 @@
 .navbar-phone {
   display: flex;
   align-items: center;
+  font-family: var(--my-text);
   text-decoration: none;
   color: var(--bg-color-silver-gold);
   border-top: var(--bg-color-silver-gold) 2px solid;
@@ -8,6 +9,8 @@
   border-bottom: var(--bg-color-silver-gold) 2px solid;
   border-right: var(--bg-color-silver-gold) 2px solid;
   padding-right: 5px;
+  box-shadow: var(--box-shadow-color-phone);
+  background-color: var(--bg-color-call);
 }
 
 .phone-icon-list-icon {
