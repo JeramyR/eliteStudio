@@ -52,7 +52,6 @@ function Navbar() {
         <div className="navbar-container">
           <div className="left-buttons">
             <Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
-            <ThemeToggle />
           </div>
           <Logo />
           <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
@@ -77,6 +76,7 @@ function Navbar() {
             >
               Contact
             </Link>
+            <ThemeToggle />
           </div>
 
           <Phone />
