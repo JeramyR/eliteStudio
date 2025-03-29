@@ -72,13 +72,15 @@ function ContactInfo() {
             <div className="map-container">
               <div className="map-responsive">
                 <iframe
+                  title="Elite Studio Location on Google Maps"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.662418891809!2d-112.48683232426158!3d34.562101772969164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872d2ed0a021fc3f%3A0x1cb7aeb024a0fddd!2s1046%20Willow%20Creek%20Rd%20%2326%2C%20Prescott%2C%20AZ%2086301!5e0!3m2!1sen!2sus!4v1743134300806!5m2!1sen!2sus"
-                  width="600"
-                  height="450"
+                  width="100%"
+                  height="100%"
                   style={{ border: '0' }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  aria-label="Elite Studio location on Google Maps"
                 ></iframe>
               </div>
             </div>
