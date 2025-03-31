@@ -1,6 +1,28 @@
 function Legal() {
   return (
     <div className="legal-page">
+      <div>
+        Image by {/* microneedle, prp */}
+        <a href="https://pixabay.com/users/maykudi-40643125/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8704166">
+          Maykudi
+        </a>
+        Image by{/* botox */}
+        <a href="https://pixabay.com/users/lucas_pego-9533512/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5382055">
+          Lucas Pêgo Oliveira Pereira Luquinhas
+        </a>
+        Image by{/*weight*/}
+        <a href="https://pixabay.com/users/thomaswolter-92511/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7543699">
+          Thomas Wolter
+        </a>
+        {/* images above here */}
+        <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7543699">
+          Pixabay
+        </a>
+        <div>From</div>
+        {/* lips  from pexels */}
+        Photo by Youssef Labib:
+        https://www.pexels.com/photo/hands-with-syringe-touching-patient-face-9157201/
+      </div>
       <div className="legal-container">
         <h1>Terms and Agreements</h1>
 

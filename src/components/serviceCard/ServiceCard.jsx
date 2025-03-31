@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 
-function ServiceCard({ id, title, goal, description }) {
+function ServiceCard({ id, title, goal, description, src }) {
   return (
-    <div className="service-card">
+    <div
+      className="service-card"
+      style={{
+        backgroundImage: `url(${src})`,
+      }}
+    >
       <span className="line top"></span>
       <span className="line right"></span>
       <span className="line bottom"></span>
@@ -21,5 +26,4 @@ function ServiceCard({ id, title, goal, description }) {
     </div>
   );
 }
-
 export default ServiceCard;
