@@ -1,0 +1,25 @@
+.featured-services-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.featured-services-flex > * {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 400px;
+  min-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .featured-services-flex > * {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-services-flex > * {
+    flex: 1 1 100%;
+  }
+}

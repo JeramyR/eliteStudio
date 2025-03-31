@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Parallax from '../../components/parallax/Parallax';
+import PremiumService from '../../components/premiumService/PremiumService';
 import SmallSection from '../../components/sectionBreak/SectionBreak';
 import TitleSection from '../../components/sectionTitle/SectionTitle';
-const lasergirl = '/images/bg-woman-1.webp';
 
+const lasergirl = '/images/bg-woman-1.webp';
 const images = [
   '/images/bg-1.webp',
   '/images/bg-2.webp',
@@ -116,34 +117,11 @@ function Home() {
         </div>
       </section>
       {/* Featured Services */}
-      <section className="featured-services">
-        <h2>Our Premium Services</h2>
-        <div className="services-grid">
-          <div className="service-card">
-            <div className="service-icon">💉</div>
-            <h3>Botox Treatments</h3>
-            <p>Professional anti-aging solutions for natural-looking results</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">✂️</div>
-            <h3>Hair Styling</h3>
-            <p>Expert cuts, coloring, and styling for your perfect look</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">💆</div>
-            <h3>Facial Treatments</h3>
-            <p>Luxurious facials and skin rejuvenation therapies</p>
-          </div>
-          <div className="service-card">
-            <div className="service-icon">💅</div>
-            <h3>Nail Care</h3>
-            <p>
-              Professional manicures and pedicures for beautiful hands and feet
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <div className="break" />
+      <TitleSection text="Premium Skin & Wellness" />
+      <SmallSection text="Therapies" />
+      <PremiumService />
+      <div className="break" />
       {/* Testimonials */}
       <section className="testimonials">
         <h2>Client Testimonials</h2>
