@@ -29,7 +29,7 @@
   --color-black-gold: black;
   --box-shadow-color-dark: 2px 2px 0 rgba(0, 0, 0, 1);
   --box-shadow-color-phone: 2px 2px 4px rgba(0, 0, 0, 1);
-  --box-shadow-color-light: 2px 2px 4px silver;
+  --box-shadow-color-light: 1px 1px 0 silver;
   --box-shadow-logo: 1px 1px 0 #c0a080;
   --box-shadow-nav: 0 2px 12px rgba(0, 0, 0, 1);
 

@@ -14,8 +14,8 @@ function Testimonials() {
         </div>
         <div className="testimonial-card">
           <p>
-            "Amazing hair styling and coloring. They always exceed my
-            expectations!"
+            "I've finally found something that works. I feel healthier, more
+            confident, and supported every step of the way!"
           </p>
           <div className="testimonial-author">
             <span className="author-name">Jennifer R.</span>
