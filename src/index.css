@@ -7,6 +7,7 @@
 @import './views/services/services.css';
 
 /* component imports */
+@import './components/about/about.css';
 @import './components/footer/footer.css';
 @import './components/logo/logo.css';
 @import './components/navbar/navbar.css';
@@ -16,6 +17,7 @@
 @import './components/serviceCard/servicecard.css';
 @import './components/sectionBreak/section-break.css';
 @import './components/sectionTitle/section-title.css';
+@import './components/testimonials/testimonials.css';
 @import './components/themeToggle/themetoggle.css';
 
 @font-face {
@@ -119,7 +121,7 @@ html {
 }
 
 .break {
-  margin: 10rem 0;
+  margin: 5rem 0;
   height: 1px;
 }
 

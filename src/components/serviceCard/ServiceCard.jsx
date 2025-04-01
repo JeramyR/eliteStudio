@@ -12,11 +12,13 @@ function ServiceCard({ id, title, goal, description, src }) {
       <span className="line right"></span>
       <span className="line bottom"></span>
       <span className="line left"></span>
-
+      <div className="service-card-front-title">{title}</div>
       <div className="overlay">
         <div className="overlay-content">
-          <h3 className="service-card-title">{title}</h3>
-          <h4 className="service-card-goal">{goal}</h4>
+          <div className="titles-div">
+            <h3 className="service-card-title">{title}</h3>
+            <h4 className="service-card-goal">{goal}</h4>
+          </div>
           <p className="service-card-description">{description}</p>
           <Link className="service-card-link" to={`/${id}`}>
             Learn More ⟶
