@@ -22,11 +22,14 @@
   --text-color-light: rgb(255, 255, 255);
   --text-color-silver: silver;
   --text-color-black-silver: black;
+  --text-color-about: black;
+  --text-shadow-about: none;
   --box-shadow-color-dark: 2px 2px 0 rgba(0, 0, 0, 1);
   --box-shadow-color-phone: 2px 2px 4px rgba(0, 0, 0, 1);
   --box-shadow-color-light: 2px 2px 4px silver;
   --box-shadow-logo: 1px 1px 0 #c0a080;
   --box-shadow-nav: 0 2px 12px rgba(0, 0, 0, 1);
+
   /* button for light-dark mode */
   --sun-color: #fabc1c;
   --moon-color: #fffdf2;
@@ -39,7 +42,14 @@
 .dark {
   --bg-color-light-primary: rgba(0, 0, 0, 0.475);
   --bg-color-light-secondary: #00000087;
-  --bg-color-light-tertiary: silver;
+  --bg-color-light-tertiary: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0) 0%,
+    /* rgba(0, 0, 0, 0.3) 40%,
+      rgba(0, 0, 0, 0.45) 50%,
+      rgba(0, 0, 0, 0.3) 60%, */
+      rgba(0, 0, 0, 0.3) 100%
+  );
   --bg-color-fade: linear-gradient(
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0) 100%
@@ -53,6 +63,11 @@
   --text-color-light: black;
   --text-color-black-silver: silver;
   --text-color-silver: rgb(0, 0, 0);
+  --text-color-about: rgb(255, 255, 255);
+  --text-shadow-about:
+    -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black,
+    0px -1px 0 black, -1px 0px 0 black, 1px 0px 0 black, 0px 1px 0 black,
+    0 0 10px black;
   --box-shadow-color-dark: 2px 2px 0 rgb(192, 192, 192);
   --box-shadow-color-phone: 2px 2px 4px rgba(0, 0, 0, 1);
   --box-shadow-color-light: 2px 2px 4px #020202;
