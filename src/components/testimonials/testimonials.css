@@ -1,7 +1,10 @@
 /* Testimonials */
 .testimonials {
   padding: 5rem 2rem;
-  background: #fff;
+  background: var(--bg-color-light-tertiary);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .testimonials h2 {
@@ -17,18 +20,23 @@
 }
 
 .testimonial-card {
-  background: #f8f8f8;
+  background: var(--bg-color-light-primary);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+  margin: 1rem;
+  text-shadow: var(--box-shadow-color-light);
 }
 
 .testimonial-card p {
-  color: #666;
-  font-size: 1.1rem;
+  color: var(--color-black-gold);
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-style: italic;
+  font-family: var(--my-text);
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .testimonial-author {
@@ -37,13 +45,14 @@
 }
 
 .author-name {
-  color: #2c2c2c;
+  color: var(--bg-color-black-gold);
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--small-line-break);
 }
 
 .author-title {
-  color: #c0a080;
+  color: var(--bg-color-silver-gold);
   font-size: 0.9rem;
 }
 
