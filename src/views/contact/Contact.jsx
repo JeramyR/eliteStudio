@@ -1,11 +1,13 @@
+const image = '/images/sola.webp';
+
 function ContactInfo() {
   return (
     <div className="contact-info-page">
       {/* Header Section */}
-      <section className="contact-info-header">
-        <h1>Contact Information</h1>
-        <p>Get in touch with us for appointments and inquiries</p>
-      </section>
+      <section
+        className="contact-info-header"
+        style={{ backgroundImage: `url(${image})` }}
+      ></section>
 
       {/* Main Content */}
       <div className="contact-info-container">
@@ -15,16 +17,12 @@ function ContactInfo() {
             <h2>Business Hours</h2>
             <div className="hours-list">
               <div className="hours-item">
-                <span className="day">Monday - Friday</span>
-                <span className="time">9:00 AM - 8:00 PM</span>
+                <span className="day">Monday</span>
+                <span className="time">10:00 AM - 5:00 PM</span>
               </div>
               <div className="hours-item">
                 <span className="day">Saturday</span>
-                <span className="time">9:00 AM - 6:00 PM</span>
-              </div>
-              <div className="hours-item">
-                <span className="day">Sunday</span>
-                <span className="time">10:00 AM - 4:00 PM</span>
+                <span className="time">10:00 AM - 5:00 PM</span>
               </div>
             </div>
           </div>
@@ -36,21 +34,23 @@ function ContactInfo() {
                 <i className="fas fa-phone"></i>
                 <div className="contact-details">
                   <h3>Phone</h3>
-                  <p>(555) 123-4567</p>
+                  <a href="tel:9285141352">(928) 514-1352</a>
                 </div>
               </div>
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>
                 <div className="contact-details">
                   <h3>Email</h3>
-                  <p>info@beautysalon.com</p>
+                  <a href="mailto:eliteinjectionstudio@gmail.com">
+                    eliteinjectionstudio@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="contact-item">
                 <i className="fas fa-clock"></i>
                 <div className="contact-details">
                   <h3>Appointments</h3>
-                  <p>Book online or call us</p>
+                  <p>Call or Text for availability</p>
                 </div>
               </div>
             </div>
@@ -60,13 +60,13 @@ function ContactInfo() {
         {/* Location Section */}
         <section className="location-section">
           <div className="location-card">
-            <h2>Our Location</h2>
+            <h2>Elite Injection Studio</h2>
             <div className="address">
               <i className="fas fa-map-marker-alt"></i>
               <div className="address-details">
-                <h3>Address</h3>
-                <p>123 Beauty Lane</p>
-                <p>City, State 12345</p>
+                <h3> *Inside Sola Salon*</h3>
+                <p>1046 Willow Creek Rd. Suite 26</p>
+                <p>Prescott, AZ 86301</p>
               </div>
             </div>
             <div className="map-container">
@@ -94,11 +94,12 @@ function ContactInfo() {
             <div className="info-content">
               <div className="info-item">
                 <h3>Parking</h3>
-                <p>Free parking available in our private lot</p>
+                <p>Park in the Safeway parking lot</p>
               </div>
               <div className="info-item">
-                <h3>Accessibility</h3>
-                <p>Wheelchair accessible entrance and facilities</p>
+                <h3>Location</h3>
+                <p>We are inside of "Sola Salon"</p>
+                <p>Down the hallway to the right</p>
               </div>
               <div className="info-item">
                 <h3>Payment Methods</h3>

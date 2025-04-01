@@ -6,7 +6,8 @@
   padding: 6rem 2rem 4rem;
   text-align: center;
   color: white;
-  margin: -2rem -2rem 2rem -2rem;
+  margin: 100px -2rem 2rem -2rem;
+  height: 80vh;
 }
 
 .contact-info-header h1 {
@@ -25,16 +26,18 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 /* Business Details */
 .business-details {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 2rem;
+  justify-content: center;
 }
 
 .detail-card {
@@ -101,6 +104,14 @@
   color: #2c2c2c;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+  all: unset;
+}
+.contact-details a:hover {
+  color: #c0a080;
+  cursor: pointer;
 }
 
 .contact-details p {
