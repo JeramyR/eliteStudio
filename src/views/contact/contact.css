@@ -302,8 +302,12 @@
 }
 
 @media (max-width: 480px) {
+  .business-details {
+    flex-direction: column;
+  }
   .contact-info-header {
     margin: 0;
+    height: 40vh;
   }
 
   .contact-info-header h1 {
