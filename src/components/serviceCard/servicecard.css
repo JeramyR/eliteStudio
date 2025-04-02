@@ -7,10 +7,10 @@
   background-size: cover;
   border-radius: 10px;
   overflow: hidden;
-  cursor: pointer;
   transition:
     transform 1s ease,
     box-shadow 1s ease;
+  font-size: 0.9rem;
 }
 
 .service-card:hover {
@@ -86,10 +86,38 @@
   animation: slide-left 1s forwards;
 }
 
+.service-card-front-title {
+  position: absolute;
+  bottom: 1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--small-line-break);
+  white-space: nowrap;
+  font-size: 1rem;
+  color: white;
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.8),
+    0 0 1px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.service-card:hover .service-card-front-title {
+  opacity: 0;
+}
+
+.service-card:hover .overlay {
+  opacity: 1;
+}
+
+.service-card:not(:hover) .overlay {
+  transition-delay: 0s;
+  /* kill the delay on exit */
+}
+
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(11, 11, 11, 0.5);
+  background: rgba(11, 11, 11, 0.75);
   opacity: 0;
   z-index: 1;
   display: flex;
@@ -97,6 +125,7 @@
   align-items: center;
   transition: opacity 0.5s ease 0.5s;
   margin: 1rem;
+
 }
 
 .service-card:hover .overlay {
@@ -109,24 +138,48 @@
 }
 
 .overlay-content {
-  color: white;
+  color: hsl(0, 0%, 100%);
   text-align: center;
   padding: 1rem;
+  font-family: var(--general-text);
+  text-shadow:
+    0 1px 0 rgb(0, 0, 0),
+    0 0 1px rgb(0, 0, 0);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.title-div {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-family: var(--small-line-break);
+  text-shadow:
+    0 1px 0 rgb(0, 0, 0),
+    0 0 1px rgb(0, 0, 0);
 }
 
 .service-card-title {
-  color: #2c2c2c;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-family: var(--large-line-break);
+  font-size: 1.2rem;
 }
 
 .service-card-goal {
+  font-family: var(--small-line-break);
 }
 
 .service-card-description {
 }
 
 .service-card-link {
+  color: #c0a080;
+  text-shadow:
+    -1px -1px 0 rgba(255, 255, 255, 0.9),
+    1px 1px 0 black,
+    0 0 1px rgba(255, 255, 255, 0.7);
+  text-decoration: none;
 }
 
 @keyframes slide-top {
@@ -134,8 +187,13 @@
     width: 0;
   }
 
+  75% {
+    background: hwb(317 0% 20% / 0.664);
+  }
+
   100% {
     width: calc(100% - 2rem);
+    background: silver;
   }
 }
 
@@ -144,18 +202,29 @@
     height: 0;
   }
 
+  75% {
+    background: hwb(317 0% 20% / 0.664);
+  }
+
   100% {
     height: calc(100% - 2rem);
+    background: silver;
   }
 }
 
 @keyframes slide-bottom {
   0% {
     width: 0;
+    background: black;
+  }
+
+  75% {
+    background: hwb(317 0% 20% / 0.664);
   }
 
   100% {
     width: calc(100% - 2rem);
+    background: silver;
   }
 }
 
@@ -164,13 +233,25 @@
     height: 0;
   }
 
+  75% {
+    background: hwb(317 0% 20% / 0.664);
+  }
+
   100% {
     height: calc(100% - 2rem);
+    background: silver;
+  }
+}
+
+@media (max-width: 1250px) {
+  .overlay-content {
+    padding: 0.5rem;
+    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 768px) {
-}
-
-@media (max-width: 480px) {
+  .title-div {
+    font-size: 0.9rem;
+  }
 }
