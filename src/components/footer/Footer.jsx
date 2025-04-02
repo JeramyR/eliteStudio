@@ -3,13 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>1046 Willow Creek Rd. Suite 26</p>
-          <p>Prescott, AZ 86301</p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=1046+Willow+Creek+Rd+Suite+26+Prescott+AZ+86301"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>1046 Willow Creek Rd. Suite 26</p>
+            <p>Prescott, AZ 86301</p>
+          </a>
           <a href="tel:9285141352">(928) 514-1352</a>
           <a href="mailto:eliteinjectionstudio@gmail.com">
             eliteinjectionstudio@gmail.com
@@ -26,16 +36,29 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={scrollToTop}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link to="/services" onClick={scrollToTop}>
+                Services
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={scrollToTop}>
+                Contact
+              </Link>
             </li>
             <li>
-              <Link to="/legal">Terms & Privacy</Link>
+              <Link
+                to="/legal"
+                onClick={scrollToTop}
+                title="View our legal policies and terms of service"
+                aria-label="Legal policies and terms of service"
+              >
+                Legal & Policies
+              </Link>
             </li>
           </ul>
         </div>
