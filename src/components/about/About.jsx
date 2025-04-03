@@ -1,6 +1,10 @@
 function About() {
   return (
-    <section className="about-section">
+    <section
+      id="certified-nurse"
+      className="about-section"
+      aria-label="About the aesthetics nurse Sabra and her qualifications"
+    >
       <div className="about-content">
         <div className="about-text">
           <h2>Enhance Your Natural Beauty</h2>

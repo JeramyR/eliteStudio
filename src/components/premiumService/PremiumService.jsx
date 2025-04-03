@@ -8,15 +8,17 @@ const R = (
 
 const services = [
   {
-    id: 'neuromodulators',
+    id: 'botox',
+    _id: 'neurotoxins-neuromodulators',
     src: '/images/botox.webp',
-    title: 'Neuromodulators',
+    title: 'Neuromodulators - Botox',
     goal: 'Prevent & Smooth Wrinkles',
     description:
       'Gently smooth fine lines and relax facial tension with neuromodulator treatments like Botox, Dysport, and more; designed to enhance your natural beauty, and restore a calm, refreshed, youthful appearance.',
   },
   {
     id: 'skinpen-microneedling',
+    _id: 'microneedle',
     src: '/images/micro.webp',
     title: R,
     goal: 'Restore smooth, radiant skin',
@@ -25,6 +27,7 @@ const services = [
   },
   {
     id: 'prp-prf-injections',
+    _id: 'skin-treatment',
     src: '/images/prp.webp',
     title: 'PRP/PRF injections',
     goal: 'Stimulate healing and renewal',
@@ -33,6 +36,7 @@ const services = [
   },
   {
     id: 'biofiller',
+    _id: 'bio-fill',
     src: '/images/lips.webp',
     title: 'BioFiller',
     goal: 'Restore volume naturally',
@@ -41,6 +45,7 @@ const services = [
   },
   {
     id: 'vitamin-therapy',
+    _id: 'iv-therapy',
     src: '/images/iv.webp',
     title: 'Vitamin Therapy',
     goal: 'Replenish, energize, and restore',
@@ -49,6 +54,7 @@ const services = [
   },
   {
     id: 'weight-loss-injections',
+    _id: 'glp-1',
     src: '/images/weight.webp',
     title: 'Weight Loss Injections',
     goal: 'Support healthy, sustainable weight loss',
@@ -59,12 +65,17 @@ const services = [
 
 function PremiumServices() {
   return (
-    <section className="featured-services">
+    <section
+      id="skin-treatments"
+      className="featured-services"
+      aria-label="Overview of skin and wellness treatments offered"
+    >
       <div className="featured-services-flex">
         {services.map((service, index) => (
           <ServiceCard
             key={index}
-            id={`#${service.id}`}
+            id={`${service.id}`}
+            _id={`${service._id}`}
             title={service.title}
             goal={service.goal}
             description={service.description}

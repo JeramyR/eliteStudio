@@ -22,10 +22,9 @@
   --neon-color-faded: rgba(255, 20, 188, 0.25);
   --text-color-dark: rgb(0, 0, 0);
   --text-color-light: rgb(255, 255, 255);
-  --text-color-silver: silver;
+  --text-color-silver: rgb(149, 149, 149);
   --text-color-black-silver: black;
   --text-color-about: black;
-  --text-shadow-about: none;
   --color-black-gold: black;
   --box-shadow-color-dark: 2px 2px 0 rgba(0, 0, 0, 1);
   --box-shadow-color-phone: 2px 2px 4px rgba(0, 0, 0, 1);
@@ -67,11 +66,7 @@
   --text-color-light: black;
   --text-color-black-silver: silver;
   --text-color-silver: rgb(0, 0, 0);
-  --text-color-about: rgb(255, 255, 255);
-  --text-shadow-about:
-    -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black,
-    0px -1px 0 black, -1px 0px 0 black, 1px 0px 0 black, 0px 1px 0 black,
-    0 0 10px black;
+  --text-color-about: black;
   --color-black-gold: #c0a080;
   --box-shadow-color-dark: 2px 2px 0 rgb(192, 192, 192);
   --box-shadow-color-phone: 2px 2px 4px rgba(0, 0, 0, 1);

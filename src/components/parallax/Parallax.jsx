@@ -11,7 +11,12 @@ export default function Parallax({ image }) {
   const buttonY = useTransform(scrollYProgress, [0, 1], ['800%', '-900%']);
 
   return (
-    <div className="parallax-container" ref={ref}>
+    <section
+      id="laser-treatments"
+      className="parallax-container"
+      ref={ref}
+      aria-label="Laser treatments and advanced skincare section"
+    >
       {/* text */}
       <motion.div className="parallax-content" style={{ y: textY }}>
         <h1 className="parallax-header">own your youth</h1>
@@ -49,6 +54,6 @@ export default function Parallax({ image }) {
       >
         <div className="color-gradient"></div>
       </div>
-    </div>
+    </section>
   );
 }

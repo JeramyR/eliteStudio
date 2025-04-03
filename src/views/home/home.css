@@ -53,11 +53,11 @@
   font-family: var(--small-line-break);
 }
 
-.hero-content p {
-  font-size: 1.5rem;
+.hero-content h2 {
   margin-bottom: 2rem;
   opacity: 0.9;
   font-family: var(--general-text);
+  font-weight: 600;
 }
 
 /* CTA Section */
@@ -68,12 +68,12 @@
   padding: 5rem 2rem;
   text-align: center;
   color: white;
-  color: var(--color-black-gold);
 }
 
 .cta-content {
   max-width: 800px;
   margin: 0 auto;
+  color: var(--color-black-gold);
 }
 
 .cta-content h2 {
@@ -88,6 +88,7 @@
   margin-bottom: 2rem;
   opacity: 0.9;
   font-family: var(--small-line-break);
+  font-weight: 600;
 }
 
 /* Responsive Design */

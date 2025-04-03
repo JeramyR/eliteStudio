@@ -51,7 +51,7 @@ function Home() {
   }, [allImagesLoaded, currentImageIndex]);
 
   return (
-    <div className="home-page">
+    <main className="home-page">
       {/* Hero Section */}
       {allImagesLoaded && (
         <>
@@ -70,46 +70,63 @@ function Home() {
           />
         </>
       )}
-      <section className="hero-section">
+      <header
+        className="hero-section"
+        aria-label="Hero section introducing Elite Injection Studio and services"
+      >
         <div className="hero-content">
           <h1>Transform Your Beauty</h1>
-          <p>
-            Experience luxury beauty treatments and expert aesthetic services
-          </p>
+          <h2>
+            Experience luxury beauty treatments and services with Elite
+            Injection Studio
+          </h2>
           <Link to="/contact" className="button">
             Book Appointment
           </Link>
         </div>
-      </section>
-      <SmallSection text="Prescott's Premier Med Spa" />
+      </header>
+      <SmallSection
+        text="Botox, Microneedling & More in Prescott, AZ"
+        level="h2"
+      />
       <div className="break" />
 
       {/* laser girl link */}
-      <TitleSection text="Advanced Laser Services for Face & Body" />
-      <SmallSection text="LaserGirl® Skincare Services" />
+      <TitleSection text="Advanced Laser Services for Face & Body" level="h2" />
+      <SmallSection text="LaserGirl® Skincare Services" level="h3" />
       <Parallax image={lasergirl} />
       <div className="break" />
 
       {/* About Section */}
-      <TitleSection text="Elevating Beauty, Backed by Credentials" />
-      <SmallSection text="Welcome to Elite Injection Studio!" />
+      <TitleSection
+        text="Elevating Beauty with a Certified Aesthetic Nurse"
+        level="h2"
+      />
+      <SmallSection text="Welcome to Elite Injection Studio!" level="h3" />
       <About />
       <div className="break" />
 
       {/* Featured Services */}
-      <TitleSection text="Premium Skin & Wellness" />
-      <SmallSection text="Therapies" />
+      <TitleSection text="Premium Skin & Wellness in Prescott" level="h2" />
+      <SmallSection text="Skin Therapies" level="h3" />
       <PremiumService />
       <div className="break" />
 
       {/* Testimonials */}
-      <TitleSection text="Our Clients Love Their Results" />
-      <SmallSection text="Testimonials" />
+      <TitleSection
+        text="What Our Clients Say About Elite Injection Studio"
+        level="h2"
+      />
+      <SmallSection text="Testimonials" level="h3" />
       <Testimonials />
       <div className="break" />
 
       {/* Call to action Section */}
-      <section className="cta-section">
+      <section
+        id="book-now"
+        className="cta-section"
+        aria-label="Call to action encouraging users to schedule an appointment"
+      >
         <div className="cta-content">
           <h2>Ready to Transform Your Beauty?</h2>
           <p>
@@ -120,7 +137,7 @@ function Home() {
           </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

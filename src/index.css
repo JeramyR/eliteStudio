@@ -132,11 +132,12 @@ html {
 
 .button {
   background: #c0a080;
-  color: white;
+  color: black;
   border: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
   border-radius: 10px;
+  font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
   transition: background-color 0.3s ease;

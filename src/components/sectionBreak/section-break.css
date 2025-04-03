@@ -3,14 +3,13 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
 }
 
 .section-divider .line-break {
   flex-grow: 1;
   height: 2px;
   background-color: #c0a080;
-  /* light and dark modes usage */
   box-shadow: 2px 2px 0.5rem rgba(0, 0, 0, 0.75);
   opacity: 0.7;
 }
@@ -26,5 +25,10 @@
 @media (max-width: 769px) {
   .section-divider {
     letter-spacing: normal;
+  }
+
+  .section-divider .divider-text {
+    font-size: 0.6rem;
+    font-weight: 600;
   }
 }

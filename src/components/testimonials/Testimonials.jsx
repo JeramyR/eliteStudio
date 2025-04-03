@@ -1,6 +1,10 @@
 function Testimonials() {
   return (
-    <section className="testimonials">
+    <section
+      id="medspa-reviews"
+      className="testimonials"
+      aria-label="Client testimonials and medspa reviews"
+    >
       <div className="testimonials-grid">
         <div className="testimonial-card">
           <p>

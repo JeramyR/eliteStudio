@@ -1,10 +1,11 @@
-function SectionDivider(props) {
+function SectionDivider({ text, level = 'h3' }) {
+  const HeadingTag = level;
   return (
-    <div className="section-divider">
+    <HeadingTag className="section-divider">
       <div className="line-break" />
-      <span className="divider-text">{props.text}</span>
+      <span className="divider-text">{text}</span>
       <div className="line-break" />
-    </div>
+    </HeadingTag>
   );
 }
 
