@@ -6,6 +6,9 @@ function About() {
       aria-label="About the aesthetics nurse Sabra and her qualifications"
     >
       <div className="about-content">
+        <div className="about-image">
+          <div className="image-placeholder">image goes here</div>
+        </div>
         <div className="about-text">
           <h2>Enhance Your Natural Beauty</h2>
           <p>
@@ -24,9 +27,6 @@ function About() {
             <li>✓ Personalized Treatment Plans</li>
             <li>✓ Relaxing Environment</li>
           </ul>
-        </div>
-        <div className="about-image">
-          <div className="image-placeholder">image goes here</div>
         </div>
       </div>
     </section>

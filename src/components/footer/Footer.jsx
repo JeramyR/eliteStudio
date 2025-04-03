@@ -68,6 +68,9 @@ function Footer() {
           <div className="social-links">
             <a href="https://www.instagram.com/" aria-label="Instagram">
               <FontAwesomeIcon icon={faInstagram} size="2x" />
+              {/* add this into footer */}
+              How was your experience with us? Please let us know today by
+              leaving us a review on Google.
             </a>
           </div>
         </div>
