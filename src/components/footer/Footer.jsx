@@ -1,11 +1,28 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function Footer() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    function checkIfMobile() {
+      setIsMobile(window.innerWidth <= 768);
+    }
+
+    // Initial check
+    checkIfMobile();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   function scrollToTop() {
     window.scrollTo(0, 0);
@@ -22,8 +39,8 @@ function Footer() {
       paddingBottom: '1rem',
     },
     expanded: {
-      y: -20,
-      paddingBottom: '3rem',
+      y: isMobile ? -10 : -20,
+      paddingBottom: isMobile ? '2rem' : '3rem',
       transition: {
         type: 'spring',
         stiffness: 100,
@@ -70,14 +87,16 @@ function Footer() {
       opacity: 0,
       y: 20,
     },
-    expanded: index => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        delay: 0.3 + index * 0.1,
-      },
-    }),
+    expanded: function (index) {
+      return {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.4,
+          delay: 0.3 + index * 0.1,
+        },
+      };
+    },
   };
 
   const nameVariants = {
@@ -113,7 +132,7 @@ function Footer() {
       marginTop: '3rem',
     },
     expanded: {
-      marginTop: '5rem',
+      marginTop: isMobile ? '4rem' : '5rem',
       transition: {
         duration: 0.5,
         delay: 0.2,
@@ -130,6 +149,8 @@ function Footer() {
       initial="collapsed"
       animate={isExpanded ? 'expanded' : 'collapsed'}
       variants={footerVariants}
+      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.99 }}
     >
       <div
         className="footer-content"
