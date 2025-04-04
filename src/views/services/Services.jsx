@@ -1,10 +1,16 @@
+import SectionBreak from '../../components/sectionBreak/SectionBreak';
+import SectionTitle from '../../components/sectionTitle/SectionTitle';
+
 function Services() {
   return (
     <div className="services-page">
       {/* Header Section */}
       <section className="services-header">
-        <h1>Our Services</h1>
-        <p>Experience the latest in beauty and wellness treatments</p>
+        <SectionTitle level="h1" text="Elite Injection Services" />
+        <SectionBreak
+          level="h2"
+          text="Experience the latest in beauty and wellness treatments"
+        />
       </section>
 
       {/* Injectable Treatments */}
@@ -14,7 +20,7 @@ function Services() {
           <p>Advanced solutions for natural-looking results</p>
         </div>
         <div className="services-grid">
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-syringe"></i>
 
             <h3>Neurotoxins</h3>
@@ -32,7 +38,7 @@ function Services() {
             </ul>
           </div>
 
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-microscope"></i>
             <h3>Microneedling</h3>
             <p>
@@ -47,7 +53,7 @@ function Services() {
             </ul>
           </div>
 
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-tint"></i>
             <h3>PRP/PRF Injections</h3>
             <p>
@@ -62,7 +68,7 @@ function Services() {
             </ul>
           </div>
 
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-pump-medical"></i>
             <h3>BioFiller</h3>
             <p>
@@ -78,7 +84,7 @@ function Services() {
           </div>
         </div>
       </section>
-
+      <div className="break" />
       {/* Wellness Services */}
       <section className="services-section wellness-section">
         <div className="section-header">
@@ -86,7 +92,7 @@ function Services() {
           <p>Comprehensive health and wellness solutions</p>
         </div>
         <div className="services-grid">
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-droplet"></i>
             <h3>IV and Injection Therapy</h3>
             <p>
@@ -101,7 +107,7 @@ function Services() {
             </ul>
           </div>
 
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-weight"></i>
             <h3>Weight Loss Services</h3>
             <p>Personalized weight management programs and treatments.</p>
@@ -114,7 +120,7 @@ function Services() {
           </div>
         </div>
       </section>
-
+      <div className="break" />
       {/* Facial Services */}
       <section className="services-section">
         <div className="section-header">
@@ -122,7 +128,7 @@ function Services() {
           <p>Professional skincare treatments for radiant skin</p>
         </div>
         <div className="services-grid">
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-spa"></i>
             <h3>Customized Facials</h3>
             <p>
@@ -137,7 +143,7 @@ function Services() {
             </ul>
           </div>
 
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-flask"></i>
             <h3>Chemical Peels</h3>
             <p>
@@ -152,7 +158,7 @@ function Services() {
             </ul>
           </div>
 
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-cut"></i>
             <h3>Dermaplaning</h3>
             <p>
@@ -168,7 +174,7 @@ function Services() {
           </div>
         </div>
       </section>
-
+      <div className="break" />
       {/* Laser Services */}
       <section className="services-section laser-section">
         <div className="section-header">
@@ -176,7 +182,7 @@ function Services() {
           <p>Advanced laser treatments for face and body</p>
         </div>
         <div className="services-grid">
-          <div className="service-card">
+          <div className="services-cards">
             <i className="fas fa-laser"></i>
             <h3>Advanced Laser Services</h3>
             <p>State-of-the-art laser treatments for various skin concerns.</p>
@@ -189,7 +195,7 @@ function Services() {
           </div>
         </div>
       </section>
-
+      <div className="break" />
       {/* Consultation Section */}
       <section className="consultation-section">
         <div className="consultation-content">

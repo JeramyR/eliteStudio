@@ -62,12 +62,13 @@
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background: var(--bg-color-fade);
   background-size: cover;
   background-position: center;
   padding: 5rem 2rem;
   text-align: center;
   color: white;
+  border-radius: 10px 10px 0 0;
 }
 
 .cta-content {

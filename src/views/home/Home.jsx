@@ -137,6 +137,8 @@ function Home() {
           </Link>
         </div>
       </section>
+      <div className="break" />
+      <div className="break" />
     </main>
   );
 }
