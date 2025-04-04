@@ -305,7 +305,7 @@ function Footer() {
                   className="team-member-name"
                   variants={nameVariants}
                 >
-                  Sarah Johnson
+                  Jeramy Reid
                 </motion.div>
                 <motion.div
                   className="team-member-role"
@@ -323,13 +323,13 @@ function Footer() {
                   className="team-member-name"
                   variants={nameVariants}
                 >
-                  Michael Chen
+                  Tabitha Roost
                 </motion.div>
                 <motion.div
                   className="team-member-role"
                   variants={roleVariants}
                 >
-                  Code Wizard
+                  co-dev
                 </motion.div>
               </motion.div>
               <motion.div
@@ -341,13 +341,13 @@ function Footer() {
                   className="team-member-name"
                   variants={nameVariants}
                 >
-                  Emily Rodriguez
+                  Dakota Behan
                 </motion.div>
                 <motion.div
                   className="team-member-role"
                   variants={roleVariants}
                 >
-                  Design Enchantress
+                  co-dev
                 </motion.div>
               </motion.div>
               <motion.div
@@ -359,13 +359,13 @@ function Footer() {
                   className="team-member-name"
                   variants={nameVariants}
                 >
-                  David Wilson
+                  Graham Dykes
                 </motion.div>
                 <motion.div
                   className="team-member-role"
                   variants={roleVariants}
                 >
-                  Backend Ninja
+                  co-dev
                 </motion.div>
               </motion.div>
             </div>
@@ -378,7 +378,7 @@ function Footer() {
         role="contentinfo"
         variants={footerBottomVariants}
       >
-        <p title="© 2024 Reid-Roost Development Team. All rights reserved.">
+        <p title="© 2025 Reid-Roost Development Team. All rights reserved.">
           &copy; {new Date().getFullYear()} Reid-Roost Development Team. All
           rights reserved.
         </p>
